@@ -2,9 +2,9 @@
   <div>
     <nav>
       <CallToAction />
-       <router-link to="/"><img id="logo" src="../assets/logo.svg" alt="logo"></router-link>
+       <router-link to="/"><img id="logo" src="../assets/logo.png" alt="logo"></router-link>
        <ul class="nav-links">
-          <li> <router-link to="/"><i class="fa fa-fw fa-home"></i>Home</router-link></li>
+          <li> <router-link to="/">Home</router-link></li>
           <li><router-link to="/about">About</router-link></li>
        </ul>
     </nav>
@@ -25,12 +25,14 @@ export default {
   button {
     margin-left: 80%;
     margin-right: 10%;
-    margin-top: 20px;
+    margin-top: 25px;
   }
   nav {
     height: 10vh;
+    width: 100%;
     display: inline-block;
     z-index: 2;
+    overflow-x: hidden;
   }
   #logo {
     display: flex;
@@ -54,8 +56,8 @@ export default {
       text-decoration: none;
   }
   .nav-links li a:hover {
-      font-weight: bold;
-      text-decoration: none;
+    text-decoration: none;
+    border-bottom: 1px solid #3475d1;
   }
   .nav-links li a.router-link-exact-active {
     color: #3475d1;

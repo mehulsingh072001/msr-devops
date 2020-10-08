@@ -38,6 +38,7 @@ export default {
   font-family: Roboto, Arial, sans-serif;
   height: 90vmin;
   left: 57%;
+  overflow: hidden;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);

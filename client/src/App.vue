@@ -19,7 +19,6 @@ export default {
 }
 body {
   background: #1a1a1a;
-
 }
 #app {
   color: white;
