@@ -87,6 +87,11 @@ nav li.router-link-exact-active {
     margin-left: 72%;
   }
 }
+@media(max-width: 662px) {
+  .action {
+    display: none;
+  }
+}
 @media(max-width: 768px){
   #logo {
     margin-top: 30px;
@@ -94,6 +99,9 @@ nav li.router-link-exact-active {
     width: 8vw;
     margin-left: 5%;
   }
+    .nav-links li{
+      opacity: 0;
+    }
     .action {
     margin-left: 72%;
   }
