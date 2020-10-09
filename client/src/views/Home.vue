@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar />
+    <Navbar/>
     <img src="../assets/handshake.jpg" alt="handshake">
     <div id="overlay"></div>
     <IntroText/>
@@ -18,7 +18,7 @@ export default {
     Navbar,
     IntroText,
     ScrollBtn
-  }
+  },
 }
 </script>
 
@@ -90,20 +90,6 @@ nav li.router-link-exact-active {
 @media(max-width: 662px) {
   .action {
     display: none;
-  }
-}
-@media(max-width: 768px){
-  #logo {
-    margin-top: 30px;
-    height: 3vh;
-    width: 8vw;
-    margin-left: 5%;
-  }
-    .nav-links li{
-      opacity: 0;
-    }
-    .action {
-    margin-left: 72%;
   }
 }
 </style>
