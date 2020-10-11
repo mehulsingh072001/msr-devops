@@ -1,26 +1,30 @@
 <template>
   <div>
-    <button @click="$event('scroll')"><i class="fas fa-angle-down"></i></button>
+    <button @click="scrollToElement"><i class="fas fa-angle-down"></i></button>
   </div>
 </template>
 
 <script>
 export default {
   name: "ScrollBtn",
+  components: {
+  },
   methods: {
-    scroll(e){
-      e.window.scrollBy(0, 100)
-    }
+  scrollToElement() {
+    scrollTo(document.body, 980)
   }
+}
+
 }
 </script>
 <style scoped>
   button {
+    cursor: pointer;
     font-size: 50px;
-    z-index: 4;
+    z-index: 0;
     top: 70vh;
     position: absolute;
-    right: 38%;
+    right: 50%;
     background: transparent;
     color: white;
     border: none;

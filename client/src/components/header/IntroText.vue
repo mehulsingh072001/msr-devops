@@ -33,7 +33,7 @@ export default {
 }
 .animated-title {
   color: white;
-  z-index: 4;
+  z-index: 0;
   text-align: center;
   font-family: Roboto, Arial, sans-serif;
   height: 90vmin;

@@ -1,56 +1,49 @@
 <template>
   <div>
-    <Hamburger v-if="window.width <= 414"/>
-    <Navbar v-if="window.width > 414"/>
-    <img src="../assets/handshake.jpg" alt="handshake">
-    <div id="overlay"></div>
-    <IntroText/>
-    <ScrollBtn />
+    <div class="header">
+      <Navbar/>
+      <div id="overlay"></div>
+      <img src="../assets/handshake.jpg" alt="handshake">
+      <IntroText/>
+      <ScrollBtn />
+    </div>
+    <MissionStatement/>
+    <Benifits />
+    <LastCall />
+    <SocialIcons/>
   </div>
 </template>
 
 <script>
-import Hamburger from "../components/Hamburger.vue"
-import Navbar from "../components/Navbar.vue"
-import IntroText from "../components/IntroText.vue"
-import ScrollBtn from "../components/ScrollBtn.vue"
+import Navbar from "../components/header/Navbar.vue"
+import SocialIcons from "../components/footer/SocialIcons.vue"
+import MissionStatement from "../components/content/MissionStatement.vue"
+import IntroText from "../components/header/IntroText.vue"
+import ScrollBtn from "../components/header/ScrollBtn.vue"
+import Benifits from "../components/content/Benifits.vue"
+import LastCall from "../components/content/LastCall.vue"
 export default {
   name: 'Home',
-  data() {
-    return{
-      window: {
-      width: 0,
-      height: 0
-      }
-    }
-  },
-  mounted() {
-    window.addEventListener('resize', this.handleResize);
-    this.handleResize();
-  },
-  unmounted() {
-    window.removeEventListener('resize', this.handleResize);
-  },
-  methods: {
-    handleResize() {
-      this.window.height = window.innerHeight
-      this.window.width = window.innerWidth
-    }
-  },
   components: {
     Navbar,
     IntroText,
-    Hamburger,
-    ScrollBtn
+    ScrollBtn,
+    MissionStatement,
+    Benifits,
+    LastCall,
+    SocialIcons
   },
 }
 </script>
 
 <style>
+body{
+  overflow-x: hidden
+}
 nav {
-  position: fixed;
+  position: absolute;
   display: block;
-  z-index: 3;
+  z-index: 1;
   top: 0;
   left: 0;
   right: 0;
@@ -60,15 +53,15 @@ nav {
 
 button {
   position: fixed;
-  z-index: 3;
+  z-index: 1;
 }
 
 
 #overlay {
-  position: fixed;
+  position: absolute;
   display: block;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   top: 0;
   left: 0;
   right: 0;
@@ -78,9 +71,8 @@ button {
 
 img {
   width: 100%;
-  height: 99vh;
+  height: 100vh;
 }
-
 @media(max-width: 1024px){
   #logo {
     margin-top: 30px;
@@ -96,13 +88,18 @@ img {
     width: 8vw;
     margin-left: 5%;
   }
-    .action {
-    margin-left: 72%;
+}
+@media(max-width: 414px){
+  #logo{
+    width: 20vw;
+    height: 5vh;
   }
 }
-@media(max-width: 662px) {
-  .action {
-    display: none;
+@media(max-width: 500px){
+  #logo{
+    width: 20vw;
+    height: 5vh;
   }
+
 }
 </style>

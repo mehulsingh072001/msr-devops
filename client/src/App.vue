@@ -9,18 +9,21 @@ export default {
   name: 'App',
   components: {
   },
+  mounted() {
+    return scrollTo(document.body, 0)
+  }
 }
 </script>
 
 <style>
+html{ 
+  scroll-behavior: smooth;
+}
+body{
+  background: #dddddd;
+}
 * {
   margin: 0;
   padding: 0;
-}
-body {
-  background: #1a1a1a;
-}
-#app {
-  color: white;
 }
 </style>
