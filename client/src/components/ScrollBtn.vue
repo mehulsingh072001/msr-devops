@@ -19,6 +19,7 @@ export default {
     font-size: 50px;
     z-index: 4;
     top: 70vh;
+    position: absolute;
     right: 38%;
     background: transparent;
     color: white;

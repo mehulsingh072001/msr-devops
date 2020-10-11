@@ -45,7 +45,7 @@ export default {
   width: 90vmin;
 }
 .animated-title > div {
-  left: 10%;
+  left: 15%;
   height: 50%;
   overflow: hidden;
   position: absolute;
@@ -82,11 +82,18 @@ export default {
   left: -12%;
 }
 .animated-title > div.text-bottom div {
+  left: 15%;
   animation: showBottomText 1s;
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
   top: 0;
   transform: translate(0, -100%);
+}
+@media(max-width: 768px){
+.animated-title > div.text-bottom div {
+  left: 15%;
+    text-align: center;
+  }
 }
 </style>
 

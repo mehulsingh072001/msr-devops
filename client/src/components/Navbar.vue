@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav v-if="window.width === 768">
+    <nav>
       <CallToAction />
        <router-link to="/"><img id="logo" src="../assets/logo.png" alt="logo"></router-link>
        <ul class="nav-links">
@@ -15,27 +15,6 @@
 import CallToAction from './CallToAction'
 export default {
   name: 'Navbar',
-  data() {
-    return{
-      window: {
-      width: 0,
-      height: 0
-      }
-    }
-  },
-  created() {
-    window.addEventListener('resize', this.handleResize);
-    this.handleResize();
-  },
-  unmounted() {
-    window.removeEventListener('resize', this.handleResize);
-  },
-  methods: {
-    handleResize() {
-      this.window.height = window.innerHeight
-      this.window.width = window.innerWidth
-    }
-  },
   components: {
     CallToAction,
   }
@@ -53,7 +32,7 @@ export default {
     width: 100%;
     display: inline-block;
     z-index: 2;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   #logo {
     display: flex;

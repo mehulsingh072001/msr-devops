@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Navbar/>
+    <Hamburger v-if="window.width <= 414"/>
+    <Navbar v-if="window.width > 414"/>
     <img src="../assets/handshake.jpg" alt="handshake">
     <div id="overlay"></div>
     <IntroText/>
@@ -9,23 +10,43 @@
 </template>
 
 <script>
+import Hamburger from "../components/Hamburger.vue"
 import Navbar from "../components/Navbar.vue"
 import IntroText from "../components/IntroText.vue"
 import ScrollBtn from "../components/ScrollBtn.vue"
 export default {
   name: 'Home',
+  data() {
+    return{
+      window: {
+      width: 0,
+      height: 0
+      }
+    }
+  },
+  mounted() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  },
+  unmounted() {
+    window.removeEventListener('resize', this.handleResize);
+  },
+  methods: {
+    handleResize() {
+      this.window.height = window.innerHeight
+      this.window.width = window.innerWidth
+    }
+  },
   components: {
     Navbar,
     IntroText,
+    Hamburger,
     ScrollBtn
   },
 }
 </script>
 
 <style>
-body {
-  overflow: hidden;
-}
 nav {
   position: fixed;
   display: block;
@@ -53,16 +74,11 @@ button {
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.9);
-  z-index: 2;
 }
 
 img {
   width: 100%;
   height: 99vh;
-}
-nav li.router-link-exact-active {
- background-color: indianred;
- cursor: pointer;
 }
 
 @media(max-width: 1024px){
@@ -71,9 +87,6 @@ nav li.router-link-exact-active {
     height: 3vh;
     width: 8vw;
     margin-left: 5%;
-  }
-    .action {
-    margin-left: 77%;
   }
 }
 @media(max-width: 858px){

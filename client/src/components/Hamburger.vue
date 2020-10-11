@@ -1,97 +1,84 @@
 <template>
-  <div class="hamburger" >
-   <div class="nav-line"></div>
-   <div class="nav-line"></div>
-   <div class="nav-line"></div>
-       <ul class="ham-links">
-          <li> <router-link to="/">Home</router-link></li>
-          <li><router-link to="/about">About</router-link></li>
-       </ul>
+  <div>
+   <router-link to="/"><img id="ham-logo" src="../assets/logo.png" alt="logo"></router-link>
+    <div class="hamburger" v-on:click="toggle">
+     <div class="ham-line"></div>
+     <div class="ham-line"></div>
+     <div class="ham-line"></div>
+    </div>
+    <ul id="hamlinks" :class="{'open': isOpen}">
+        <li> <router-link to="/">Home</router-link></li>
+        <li><router-link to="/about">About</router-link></li>
+     </ul>
   </div>
 </template>
 
 <script>
 export default {
+  data: () => ({
+    isOpen: false
+  }),
   name: "Hamburger",
+  methods: {
+    toggle() {
+      this.isOpen = !this.isOpen
+    }
+  }
 }
 </script>
 
 <style>
-  .hamburger {
-    position: absolute;
-    cursor: pointer;
-    right: 5%;
-    top: 50%;
-    transform: translate(-5%, -50%);
-  }
-  .ham-links li {
-    margin-top: -5%;
-    padding-left: 2%;
-    margin-top: 37px;
-    list-style: none;
-    display: inline-block;
-    font-size: 16px;
-  }
-  .ham-links li a {
-      color: white;
-      font-size: 20px;
-      text-decoration: none;
-  }
-  .ham-links li a:hover {
-    text-decoration: none;
-    border-bottom: 1px solid #3475d1;
-  }
-  .ham-links li a.router-link-exact-active {
-    color: #3475d1;
-    font-weight: bold;
-    border-bottom: 1px solid #3475d1;
-  }
-  .nav-line {
-    width: 30px;
-    height: 3px;
-    background: white;
-    margin: 5px
-  }
-  .ham-links li{
-    opacity: 1;
-  }
-
-  .ham-links {
-      position: fixed;
-      background: #1a1a1a;
-      height: 100vh;
-      width: 100%;
-      flex-direction: column;
-      clip-path: circle(100px at 100% -10%);
-      -webkit-clip-path: circle(100px at 90% -10%);
-      transition: all 1s ease-out;
-      pointer-events: none;
-  }
-  .ham-links{
-      clip-path: circle(1000px at 90% -10%);
-      -webkit-clip-path: circle(1000px at 90% -10%);
-      pointer-events: all;
-  }
-  .ham-links li {
-      opacity: 1;
-      margin-right: 20%; 
-  }
-  .ham-links li a {
-      font-size: 25px;
-  }
-  .ham-links li:nth-child(1) {
-      transition: all 0.5s ease 0.2s;
-  }
-  .ham-links li:nth-child(2) {
-      transition: all 0.5s ease 0.4s;
-  }
-  .ham-links li:nth-child(3) {
-      transition: all 0.5s ease 0.6s;
-  }
-  .ham-links li:nth-child(4) {
-      transition: all 0.5s ease 0.8s;
-  }
-  li.fade {
-      opacity: 1;
-  }
+body{
+  overflow: hidden;
+}
+#ham-logo {
+  display: flex;
+  position: absolute;
+  z-index: 5;
+  float: left;
+  height: 5vh;
+  width: 25vw;
+  margin-top: 30px;
+  overflow: hidden;
+  margin-left: 5%;
+}
+.ham-line{
+  height: 3px;
+  width: 40px;
+  background: white;
+  margin: 5px;
+}
+.hamburger{
+  position: fixed;
+  overflow: hidden;
+  z-index: 19999;
+  cursor: pointer;
+  height: 4vh;
+  right: 5%;
+  top: 5%;
+}
+#hamlinks {
+  z-index: 19998;
+  display: flex;
+  list-style: none;
+  width: 100%;
+  height: 99vh;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  position: absolute;
+  background: #5b78c7;
+  flex-direction: column;
+  clip-path: circle(100px at 90% -30%);
+  -webkit-clip-path: circle(100px at 90% -30%);
+  transition: all 1.5s ease-in-out;
+}
+#hamlinks li a{
+  color: white;
+  text-decoration: none;
+}
+#hamlinks.open {
+  clip-path: circle(1000px at 90% -10%);
+  -webkit-clip-path: circle(1000% at 90% -10%);;
+}
 </style>
