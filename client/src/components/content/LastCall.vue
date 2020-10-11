@@ -21,24 +21,30 @@ export default {
 <style scoped>
   .last{
     background: #1a1a1a;
-    position: absolute ;
+    position: static ;
     color: #dddddd;
-    height: 60vh;
+    height: 90vh;
     width: 100%;
   }
   .text{
-    margin-top: 2%;
-    z-index: -4;
+    padding-top: 130px;
+    z-index: 4;
     text-align: center;
+    position: static;
   }
   h1 {
+    position: static;
     font-size: 70px;
     text-align: center;
       z-index: -4;
   }
   p {
-    width: 20vw;
-    margin-left: 40%;
+    width: 40vw;
+    margin-left: 30%;
+    margin-top: 2%;
+    position: static;
+    font-size: 25px;
+
   }
   #action{
       position: static;

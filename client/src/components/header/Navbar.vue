@@ -48,7 +48,7 @@ export default {
     display: none;
   }
   nav {
-    height: 10vh;
+    height: 2vh;
     width: 100%;
     display: inline-block;
     z-index: 1;
@@ -77,13 +77,13 @@ export default {
       overflow: hidden;
   }
   .nav-links li a:hover {
-    text-decoration: none;
     border-bottom: 1px solid #3475d1;
+    font-weight: bold;
   }
   .nav-links li a.router-link-exact-active {
     color: #3475d1;
-    font-weight: bold;
-    border-bottom: 1px solid #3475d1;
+    font-weight: bolder;
+    font-size: 22px
   }
   @media(max-width: 1024px){
     #logo {

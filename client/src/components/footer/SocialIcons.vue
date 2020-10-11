@@ -1,6 +1,6 @@
 <template>
-  <div>
-  <p>Hover the icons.</p>
+  <div class="social">
+  <p class="message">Contact Us</p>
   <ul>
     <li><a href="https://www.facebook.com/martydevelopment/" target="_blank">
         <i class="fab fa-facebook" tabindex="0"></i>
@@ -31,16 +31,24 @@ export default {
 </script>
 
 <style scoped>
-div {
+.social {
   position: absolute;
+  width: 50%;
+  margin-left: 5%;
   font-size: 2rem;
+  z-index: 3;
 }
 
-p,
+.message{
+  margin-top: 2.5rem;
+  color: #eee;
+  margin-left: 3%;
+}
 a{
-  text-align: center;
-  margin-top: 5%;
-  margin-bottom: 2rem;
+  text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  margin-left: -40%;
   color: #eee;
 }
 
@@ -49,7 +57,7 @@ ul{
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 1rem;
+  margin-left: -45%;
   list-style-type: none;
   font-size: 2rem;
 }
@@ -59,7 +67,7 @@ ul li {
 }
 
 .fab {
-  font-size: 5rem;
+  font-size: 3rem;
 }
 /* transition for social icon hover animation */
 .fa-facebook,

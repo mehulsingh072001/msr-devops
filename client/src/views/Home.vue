@@ -10,13 +10,13 @@
     <MissionStatement/>
     <Benifits />
     <LastCall />
-    <SocialIcons/>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Navbar from "../components/header/Navbar.vue"
-import SocialIcons from "../components/footer/SocialIcons.vue"
+import Footer from "../components/footer/Footer.vue"
 import MissionStatement from "../components/content/MissionStatement.vue"
 import IntroText from "../components/header/IntroText.vue"
 import ScrollBtn from "../components/header/ScrollBtn.vue"
@@ -31,7 +31,7 @@ export default {
     MissionStatement,
     Benifits,
     LastCall,
-    SocialIcons
+    Footer
   },
 }
 </script>

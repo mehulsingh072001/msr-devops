@@ -23,6 +23,7 @@ export default {
   padding-bottom: 2rem;
   padding-top: 2rem;
   margin: auto;
+  margin-top: 3%;
 }
 span{ 
   font-weight: bold;
