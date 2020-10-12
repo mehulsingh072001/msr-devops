@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav>
-      <CallToAction />
+      <CallToAction class="action"/>
        <router-link to="/"><img id="logo" src="../../assets/logo.png" alt="logo"></router-link>
        <div class="hamburger" v-on:click="toggle">
           <div class="ham-line"></div>
@@ -39,16 +39,20 @@ export default {
 </script>
 
 <style>
+  .btn{
+    margin-top: 1%;
+  }
   .action {
-    margin-left: 80%;
+    margin-left: 85%;
     margin-right: 10%;
-    margin-top: 25px;
   }
   #hamlinks{
     display: none;
   }
   nav {
-    height: 2vh;
+    overflow: hidden;
+    font-family: none;
+    height: 10vh;
     width: 100%;
     display: inline-block;
     z-index: 1;
@@ -59,7 +63,7 @@ export default {
     height: 5vh;
     width: 8vw;
     margin-top: 20px;
-    margin-left: 10%;
+    margin-left: 5%;
   }
   .nav-links li {
     margin-top: -5%;
@@ -68,11 +72,10 @@ export default {
     list-style: none;
     overflow: hidden;
     display: inline-block;
-    font-size: 16px;
+    font-size: 24px;
   }
   .nav-links li a {
       color: white;
-      font-size: 20px;
       text-decoration: none;
       overflow: hidden;
   }
@@ -82,8 +85,9 @@ export default {
   }
   .nav-links li a.router-link-exact-active {
     color: #3475d1;
+    text-decoration: none;
     font-weight: bolder;
-    font-size: 22px
+    border-bottom: 1px solid #3475d1;
   }
   @media(max-width: 1024px){
     #logo {
@@ -93,15 +97,29 @@ export default {
       margin-left: 5%;
     }
   }
+
+  /* ipad */
+  @media(max-width: 768px){
+    .btn{
+      margin-top: 3%
+    }
+    .action{
+      margin-left: 73%;
+    }
+  #logo {
+    height: 2vh;
+    width: 1vw;
+    margin-top: 20px;
+    margin-left: -1%;
+  }
+  }
+
   @media(max-width: 858px){
     #logo {
       margin-top: 30px;
       height: 3vh;
       width: 8vw;
       margin-left: 5%;
-    }
-      .action {
-      margin-left: 72%;
     }
   }
   @media(max-width: 662px){

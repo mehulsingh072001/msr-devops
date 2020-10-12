@@ -36,8 +36,8 @@ export default {
   font-family: 'Roboto', sans-serif;
   font-family: 'Montserrat', sans-serif;
     max-width: 1000px;
-    overflow: none;
-    position: static;
+    overflow: hidden;
+    position: relative;
     margin-left: 20%; 
     margin-top: 7%;
   }
@@ -48,6 +48,7 @@ export default {
   }
   .card {
     display: grid;
+    overflow:none ;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5%;
     background: #dddddd;
@@ -63,5 +64,19 @@ export default {
   .card:nth-child(even) img{
     order: 2;
   }
-  
+  /* Ipad */
+  @media(max-width: 768px){
+    .container{
+      max-width: 96%;
+      margin-left:  2%;
+    }
+    .card{
+      height: 100%;
+      margin-bottom: 10%;
+    }
+    .card img{
+      height: 250px;
+      width: 400px
+    }
+  }
 </style>

@@ -81,6 +81,14 @@ img {
     margin-left: 5%;
   }
 }
+@media(max-width: 768px){
+  img {
+    height: 90vh;
+  }
+  #overlay{
+    height: 90vh;
+  }
+}
 @media(max-width: 858px){
   #logo {
     margin-top: 30px;

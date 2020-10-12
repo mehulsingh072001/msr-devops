@@ -37,7 +37,7 @@ export default {
   text-align: center;
   font-family: Roboto, Arial, sans-serif;
   height: 90vmin;
-  left: 57%;
+  left: 55%;
   overflow: hidden;
   position: absolute;
   top: 50%;

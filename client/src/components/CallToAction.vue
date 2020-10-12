@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button id="action" class="action">Call To Action</button>
+    <button class="btn">Call To Action</button>
   </div>
 </template>
 
@@ -11,9 +11,12 @@ export default {
 </script>
 
 <style >
-  .action {
+  .btn{
     font-size: 19px;
+    font-weight: normal;
+    font-family: none;
     padding: 15px 32px;
+    padding-top: 17px;
     overflow: hidden;
     position: absolute;
     cursor: pointer;
@@ -24,12 +27,10 @@ export default {
     border: none;
     background: #3475d1;
     z-index: 4;
-    width: 10vw;
-    height: 6vh;
   }
   @media(max-width: 768px) {
     .action {
-      margin-right: 1%;
+      margin-right: 10%;
     }
   }
 </style>
