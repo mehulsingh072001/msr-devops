@@ -28,6 +28,7 @@ export default {
   }
   .text{
     padding-top: 5%;
+    overflow: hidden;
     width: 100%;
     text-align: center;
     position: static;

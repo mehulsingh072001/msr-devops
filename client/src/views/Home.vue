@@ -22,6 +22,7 @@ import IntroText from "../components/header/IntroText.vue"
 import ScrollBtn from "../components/header/ScrollBtn.vue"
 import Benifits from "../components/content/Benifits.vue"
 import LastCall from "../components/content/LastCall.vue"
+
 export default {
   name: 'Home',
   components: {
