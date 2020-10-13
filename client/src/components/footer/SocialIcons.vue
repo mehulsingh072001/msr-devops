@@ -1,5 +1,5 @@
 <template>
-  <div class=".container grid-2">
+  <div class="social">
   <h3 class="message">Contact Us</h3>
   <ul>
     <li><a href="https://www.facebook.com/martydevelopment/" target="_blank">
@@ -31,15 +31,18 @@ export default {
 </script>
 
 <style scoped>
-.container {
+.social {
   position: absolute;
-  height: 100%;
+  width: 50%;
+  margin-top: 1%;
+  margin-left: 11%;
   font-size: 2rem;
+  z-index: 3;
 }
 .message{
-  margin-top: 1%;
-  margin-left: 50%;
+  margin-top: 2%;
   color: #eee;
+  margin-left: 4%;
 }
 a{
   text-align: left;
@@ -49,8 +52,10 @@ a{
 ul{
   display: flex;
   margin-top: 1%;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-left: -45%;
   list-style-type: none;
   font-size: 2rem;
   overflow: hidden;
@@ -163,7 +168,6 @@ ul li {
   }
 }
 
-
 @media(max-width: 768px){
   .social {
     margin-left: 1%;
@@ -182,25 +186,6 @@ ul li {
   }
   .fab {
     font-size: 1.7rem;
-  }
-}
-@media(max-width: 414px){
-  ul{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: -0%;
-  }
-  ul li {
-    padding: 0.4rem;
-  }
-  .fab {
-    font-size: 2rem;
-  }
-  .message{
-    margin-top: 1%;
-    font-size: 2rem;
-    margin-right: 5%;
-    text-align: center;
   }
 }
 </style>
