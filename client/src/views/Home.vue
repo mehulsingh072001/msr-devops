@@ -7,8 +7,6 @@
       <IntroText/>
       <ScrollBtn />
     </div>
-    <MissionStatement/>
-    <Benifits />
     <LastCall />
     <Footer />
   </div>
@@ -17,10 +15,8 @@
 <script>
 import Navbar from "../components/header/Navbar.vue"
 import Footer from "../components/footer/Footer.vue"
-import MissionStatement from "../components/content/MissionStatement.vue"
 import IntroText from "../components/header/IntroText.vue"
 import ScrollBtn from "../components/header/ScrollBtn.vue"
-import Benifits from "../components/content/Benifits.vue"
 import LastCall from "../components/content/LastCall.vue"
 
 export default {
@@ -29,8 +25,6 @@ export default {
     Navbar,
     IntroText,
     ScrollBtn,
-    MissionStatement,
-    Benifits,
     LastCall,
     Footer
   },
