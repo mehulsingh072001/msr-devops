@@ -1,6 +1,7 @@
 <template>
   <div>
-    <nav id="home">
+    <nav id="tnav">
+      <CallToAction class="action"/>
        <router-link to="/"><img id="logo" src="../../assets/logo.png" alt="logo"></router-link>
        <div class="hamburger" v-on:click="toggle">
           <div class="ham-line"></div>
@@ -11,19 +12,21 @@
           <li> <router-link to="/"><i class="fa fa-fw fa-home"></i> Home</router-link></li>
           <li><router-link to="/about"><i class="fa fa-fw fa-wrench"></i> About</router-link></li>
        </ul>
-       <ul class="cnav-links">
-          <li><router-link to="/"><i class="fa fa-fw fa-home"></i> Home</router-link></li>
+       <ul class="nav-links">
+          <li><router-link to="/">Home</router-link></li>
           <li><router-link to="/about">About</router-link></li>
-          <li><router-link to="/blog"><i class="fas fa-blog"></i> Blog</router-link></li>
+          <li><router-link to="/blog">Blog</router-link></li>
        </ul>
     </nav>
   </div>
 </template>
 
 <script>
+import CallToAction from '../CallToAction'
 export default {
   name: 'Navbar',
   components: {
+    CallToAction,
   },
   data: () => ({
     isOpen: false
@@ -47,12 +50,12 @@ export default {
   #hamlinks{
     display: none;
   }
-  nav {
+  #tnav {
     overflow: hidden;
     font-family: none;
     height: 10vh;
     width: 100%;
-    background: #1a1a1a;
+    background: transparent;
     z-index: 1;
   }
   #logo {
@@ -63,28 +66,25 @@ export default {
     margin-top: 20px;
     margin-left: 5%;
   }
-  .cnav-links{
-    margin-left: 60%;
-  }
-  .cnav-links li {
+  .nav-links li {
     margin-top: -5%;
-    padding-left: 20%;
+    padding-left: 2%;
     margin-top: 37px;
     list-style: none;
     overflow: hidden;
     display: inline-block;
     font-size: 24px;
   }
-  .cnav-links li a {
+  .nav-links li a {
       color: white;
       text-decoration: none;
       overflow: hidden;
   }
-  .cnav-links li a:hover {
+  .nav-links li a:hover {
     border-bottom: 1px solid #3475d1;
     font-weight: bold;
   }
-  .cnav-links li a.router-link-exact-active {
+  .nav-links li a.router-link-exact-active {
     color: #3475d1;
     text-decoration: none;
     font-weight: bolder;

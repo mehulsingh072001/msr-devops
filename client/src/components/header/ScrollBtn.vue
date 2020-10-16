@@ -9,12 +9,12 @@ export default {
   name: "ScrollBtn",
   components: {
   },
-  beforeUnmount: function() {
+  unmounted: function() {
     document.removeEventListener('scroll', this.scrollToElement)
   },
   methods: {
     scrollToElement(){
-    var elmnt = document.getElementById("footer")
+    var elmnt = document.getElementById("stat")
       elmnt.scrollIntoView()
     }
   }
