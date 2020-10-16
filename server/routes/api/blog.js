@@ -14,6 +14,18 @@ router.get('/', (req, res) => {
 });
 
 router.get('/linux', (req, res) => {
+    Post.find({
+        category: ['linux']
+    })
+        .sort({ date: -1})
+        .then(posts => res.json(posts));
+})
+router.get('/pc', (req, res) => {
+    Post.find({
+        category: ['PC']
+    })
+        .sort({ date: -1})
+        .then(posts => res.json(posts));
 })
 
 
