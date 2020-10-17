@@ -1,8 +1,9 @@
 <template>
   <div class="snav">
-    <span id="span">I want to learn about </span>
-    <label class="select" for="category"> 
+    
+    <label class="select" for="category"> I want to learn about
       <select name="category" id="category">
+        <option value="#">everything</option>
         <option value="#">Linux</option>
         <option value="#">Javascript</option>
         <option value="#">PC</option>
@@ -24,13 +25,12 @@ export default {
 }
 .select {
     overflow: hidden; 
+    margin-left: 33%;
     height: 10vh;    
     width: 240px;
+    font-size: 2rem;
     margin-top: 2%;
     position: relative;
-}
-#span {
-  margin-left: 32%;
 }
 
 select{       
