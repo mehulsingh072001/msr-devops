@@ -18,7 +18,7 @@ const PostSchema = new Schema({
     category: {
         type: String,
         required: true
-    }
+    },
 });
 
 module.exports = mongoose.model('posts', PostSchema)

@@ -16,6 +16,7 @@
     "vue-scrollto": "^2.19.1",
     "vuex": "^4.0.0-0"
   },
+  "proxy": "http://localhost:5000",
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
