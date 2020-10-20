@@ -8,7 +8,8 @@
     "start": "node server/server.js",
     "server": "nodemon server/server.js",
     "client": "npm run serve --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "admin": "npm run serve --prefix admin",
+    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run admin\""
   },
   "repository": {
     "type": "git",

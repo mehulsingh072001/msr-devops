@@ -1,25 +1,5 @@
 <template>
-  <div class="footer ">
-    <div class="grid-3 center" center>
-      <div class="services">
-        <h3 class="service-head">Services</h3>
-        <ul class="service-list">
-          <li>Shopify Store and Plugin development</li>
-          <li>Webapp Development</li>
-          <li>Wordpress Development</li>
-          <li>Web Design</li>
-        </ul>
-      </div>
-      <div class="v-line"></div>
-      <div class="company">
-        <h3>Company</h3>
-        <ul class="company-list">
-          <li>About Us</li>
-          <li>Blog</li>
-        </ul>
-      </div>
-      <div class="v-line2"></div>
-    </div>
+  <div id="footer" class="footer ">
     <SocialIcons/>
     <p id="copy">MSR DevOps, Copyright &copy; 2020</p>
   </div>

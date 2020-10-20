@@ -9,11 +9,15 @@ export default {
   name: "ScrollBtn",
   components: {
   },
+  unmounted: function() {
+    document.removeEventListener('scroll', this.scrollToElement)
+  },
   methods: {
-  scrollToElement() {
-    scrollTo(document.body, 980)
+    scrollToElement(){
+    var elmnt = document.getElementById("stat")
+      elmnt.scrollIntoView()
+    }
   }
-}
 
 }
 </script>

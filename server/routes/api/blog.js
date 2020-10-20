@@ -13,6 +13,21 @@ router.get('/', (req, res) => {
         .then(posts => res.json(posts));
 });
 
+router.get('/linux', (req, res) => {
+    Post.find({
+        category: ['linux']
+    })
+        .sort({ date: -1})
+        .then(posts => res.json(posts));
+})
+router.get('/pc', (req, res) => {
+    Post.find({
+        category: ['PC']
+    })
+        .sort({ date: -1})
+        .then(posts => res.json(posts));
+})
+
 
 // @ route Post api/blog
 // @ desc  Post All Items
@@ -20,7 +35,8 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     const newPost = new Post({
         title: req.body.title,
-        content: req.body.content
+        content: req.body.content,
+        category: req.body.category
     })
 
     newPost.save().then(posts => res.json(posts))

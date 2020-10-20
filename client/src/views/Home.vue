@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="header">
-      <Navbar/>
+      <Tnav/>
       <div id="overlay"></div>
       <img src="../assets/handshake.jpg" alt="handshake">
       <IntroText/>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import Navbar from "../components/header/Navbar.vue"
+import Tnav from "../components/header/Tnav.vue"
 import Footer from "../components/footer/Footer.vue"
 import MissionStatement from "../components/content/MissionStatement.vue"
 import IntroText from "../components/header/IntroText.vue"
@@ -26,7 +26,7 @@ import LastCall from "../components/content/LastCall.vue"
 export default {
   name: 'Home',
   components: {
-    Navbar,
+    Tnav,
     IntroText,
     ScrollBtn,
     MissionStatement,
@@ -41,15 +41,8 @@ export default {
 body{
   overflow-x: hidden
 }
-nav {
+#tnav {
   position: absolute;
-  display: block;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: transparent;
 }
 
 button {
@@ -91,6 +84,9 @@ img {
   }
 }
 @media(max-width: 858px){
+    nav{
+      position: static;
+    }
   #logo {
     margin-top: 30px;
     height: 3vh;
