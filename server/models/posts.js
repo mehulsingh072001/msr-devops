@@ -7,6 +7,7 @@ const PostSchema = new Schema({
         type: String,
         required: true
     },
+    images: {type: Schema.Types.ObjectId, ref: "upload.files"},
     content: {
         type: String,
         required: true 
