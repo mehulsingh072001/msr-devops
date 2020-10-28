@@ -1,3 +1,3 @@
 module.exports = {
-    mongoURI: "mongodb://localhost:27017/msr-devops"
+    mongoURI: "mongodb+srv://lucifer:biteme430@blog.0hvmc.mongodb.net/posts?retryWrites=true&w=majority"
 }

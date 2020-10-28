@@ -25,7 +25,7 @@ import axios from 'axios'
                 Add the form data we need to submit
             */
             formData.append('file', this.file);
-            axios.post( 'http://localhost:5000/api/blog/upload',
+            axios.post( 'http://localhost:5000/api/blog/',
                 formData,
                 {
                 headers: {

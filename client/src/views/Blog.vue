@@ -3,6 +3,7 @@
     <Navbar id="nav"/>
     <Selector/>
     <div class="posts">
+      <img src={{post.image}} alt="fd">
       <div v-for="post in allPosts" :key="post.id" class="post">
         {{ post.title }}
       </div>
