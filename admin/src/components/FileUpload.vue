@@ -1,30 +1,34 @@
 <template>
-  <div class="container">
-    <div class="large-12 medium-12 small-12 cell">
-      <label>File
-        <input type="file" id="file" ref="file" v-on:change="handleFileUpload()"/>
-      </label>
+  <div>
+      <input type="file" id="file" ref="file" v-on:change="handleFileUpload()"/>
+      <input type="text" v-model="title" placeholder="Add title"/>
+      <input type="text" v-model="content" placeholder="Add content"/>
+      <input type="text" v-model="category" placeholder="Add category"/>
       <button v-on:click="submitFile()">Submit</button>
-    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-  export default {
-    /*
-      Defines the data used by the component
-    */ data(){ return {
-        file: ''
-      }
-    },
-    methods: {
-      submitFile(){
+export default {
+  name: 'FileUpload',
+  data(){ return {
+     file: '',
+     title: '',
+     content: '',
+     category: '',
+    }
+  },
+  methods: {
+   submitFile(){
             let formData = new FormData();
             /*
                 Add the form data we need to submit
             */
             formData.append('file', this.file);
+            formData.append('title', this.title);
+            formData.append('content', this.content);
+            formData.append('category', this.category);
             axios.post( 'http://localhost:5000/api/blog/',
                 formData,
                 {
@@ -33,15 +37,15 @@ import axios from 'axios'
                 }
               }
             ).then(function(){
-          console.log('SUCCESS!!');
-        })
-        .catch(function(){
-          console.log('FAILURE!!');
-        });
-      },
-      handleFileUpload(){
-        this.file = this.$refs.file.files[0];
-      }
+            console.log('SUCCESS!!');
+          })
+          .catch(function(){
+            console.log('FAILURE!!');
+          });
+        },
+        handleFileUpload(){
+          this.file = this.$refs.file.files[0];
+        }
     }
   }
 </script>
