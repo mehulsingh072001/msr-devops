@@ -2,26 +2,21 @@
   <div>
     <Navbar id="nav"/>
     <Selector/>
-    <div class="posts">
-        <img v-for="post in allPosts" v-bind:src="'http://localhost:5000/'+post.image" :key="post.id" alt="1">
-    </div>
+    <PostList/>
   </div>
 </template>
 
 <script>
 import Navbar from '../components/header/Navbar.vue'
 import Selector from '../components/header/Selector.vue'
+import PostList from '../components/content/Posts.vue'
 import { mapActions, mapGetters } from 'vuex';
 export default {
   name: 'Blog',
-  data() {
-    return {
-      thumb: ''
-    }
-  },
   components: {
     Navbar,
-    Selector
+    Selector,
+    PostList
   },
   methods: {
     ...mapActions(['fetchPosts'])
