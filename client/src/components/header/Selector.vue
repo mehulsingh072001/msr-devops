@@ -1,12 +1,11 @@
 <template>
   <div class="snav">
-    
-    <label class="select" for="category"> I want to learn about
-      <select name="category" id="category">
-        <option value="#">everything</option>
-        <option value="#">Linux</option>
-        <option value="#">Javascript</option>
-        <option value="#">PC</option>
+    <label @change="fetchCats($event)" class="select" for="category"> I want to learn about
+      <select  name="category" id="category">
+        <option value="everything">everything</option>
+        <option value="linux">Linux</option>
+        <option value="web-dev">web-dev</option>
+        <option value="pc">PC</option>
       </select>
     </label>
   </div>
@@ -14,8 +13,13 @@
 
 <script>
 
+  import { mapActions, mapGetters } from 'vuex';
 export default {
-  name: 'Selector'
+  name: 'Selector',
+  methods: {
+    ...mapActions(['fetchCats'])
+  },
+  computed: mapGetters(['allPosts']),
 }
 </script>
 

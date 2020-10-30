@@ -2,6 +2,7 @@
   <div>
       <input type="file" id="file" ref="file" v-on:change="handleFileUpload()"/>
       <input type="text" v-model="title" placeholder="Add title"/>
+      <input type="text" v-model="description" placeholder="Add description"/>
       <input type="text" v-model="content" placeholder="Add content"/>
       <input type="text" v-model="category" placeholder="Add category"/>
       <button v-on:click="submitFile()">Submit</button>
@@ -15,6 +16,7 @@ export default {
   data(){ return {
      file: '',
      title: '',
+     description: '',
      content: '',
      category: '',
     }
@@ -27,6 +29,7 @@ export default {
             */
             formData.append('file', this.file);
             formData.append('title', this.title);
+            formData.append('description', this.description);
             formData.append('content', this.content);
             formData.append('category', this.category);
             axios.post( 'http://localhost:5000/api/blog/',

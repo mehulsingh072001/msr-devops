@@ -10,7 +10,6 @@
 import Navbar from '../components/header/Navbar.vue'
 import Selector from '../components/header/Selector.vue'
 import PostList from '../components/content/Posts.vue'
-import { mapActions, mapGetters } from 'vuex';
 export default {
   name: 'Blog',
   components: {
@@ -18,13 +17,6 @@ export default {
     Selector,
     PostList
   },
-  methods: {
-    ...mapActions(['fetchPosts'])
-  },
-  computed: mapGetters(['allPosts']),
-  created() {
-    this.fetchPosts()
-  }
 }
 </script>
 

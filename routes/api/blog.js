@@ -23,10 +23,21 @@ var upload = multer({ storage: storage}).single('file');
 router.get('/', (req, res) => {
     Post.find()
         .sort({ date: -1})
-        .select("title content category image")
+        .then(posts => res.json(posts));
+});
+router.get('/everything', (req, res) => {
+    Post.find()
+        .sort({ date: -1})
         .then(posts => res.json(posts));
 });
 
+router.get('/web-dev', (req, res) => {
+    Post.find({
+        category: ['web-dev']
+    })
+        .sort({ date: -1})
+        .then(posts => res.json(posts));
+})
 router.get('/linux', (req, res) => {
     Post.find({
         category: ['linux']
@@ -48,6 +59,7 @@ router.get('/pc', (req, res) => {
 router.post('/', upload, (req, res) => {
     const newPost = new Post({
         title: req.body.title,
+        description: req.body.description,
         content: req.body.content,
         category: req.body.category,
         image: req.file.path
