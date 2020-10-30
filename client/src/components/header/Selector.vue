@@ -52,9 +52,40 @@ select{
     -moz-appearance: none;
     appearance: none;
 }
+@media(max-width: 800px){
+  .snav{
+    margin-top: 4%;
+  }
+  .select{
+    margin-left: 17%
+  }
+  select{
+    width: 23%;
+  }
+}
 @media(max-width: 768px){
   .select{
     margin-left: 14%
+  }
+}
+@media(max-width: 414px){
+  .select{
+    margin-left: 13%;
+    font-size: 1.7rem;
+  }
+  select{
+    text-align: center;
+    font-size: 1.7rem;
+    margin-left: 30%;
+    width: 40%;
+  }
+}
+@media(max-width: 360px){
+  .snav{
+    margin-right: 8%;
+  }
+  select{
+    width: 45%;
   }
 }
 </style>

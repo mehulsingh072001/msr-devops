@@ -10,6 +10,7 @@
       <ul id="hamlinks" :class="{'open': isOpen}">
           <li> <router-link to="/"><i class="fa fa-fw fa-home"></i> Home</router-link></li>
           <li><router-link to="/about"><i class="fa fa-fw fa-wrench"></i> About</router-link></li>
+          <li><router-link to="/blog"><i class="fas fa-blog"></i> Blog</router-link></li>
        </ul>
        <ul class="cnav-links">
           <li><router-link to="/"><i class="fa fa-fw fa-home"></i> Home</router-link></li>
@@ -99,8 +100,49 @@ export default {
     }
   }
 
+  @media(max-width: 800px){
+    #clogo {
+      margin-top: 1.5rem;
+      height: 3.5vh;
+      width: 12vw;
+      margin-left: 3%;
+    }
+    nav {
+      height: 7vh;
+    }
+    .cnav-links{
+      margin-left: 47%;
+    }
+    .cnav-links li {
+      margin-top: -5%;
+      padding-left: 10%;
+      margin-top: 37px;
+      list-style: none;
+      overflow: hidden;
+      display: inline-block;
+      font-size: 24px;
+    }
+    .cnav-links li a {
+        color: white;
+        text-decoration: none;
+        overflow: hidden;
+    }
+    .cnav-links li a:hover {
+      border-bottom: 1px solid #3475d1;
+      font-weight: bold;
+    }
+    .cnav-links li a.router-link-exact-active {
+      color: #3475d1;
+      text-decoration: none;
+      font-weight: bolder;
+      border-bottom: 1px solid #3475d1;
+    }
+  }
   /* ipad */
   @media(max-width: 768px){
+    nav {
+      height: 10vh;
+    }
     .btn{
       margin-top: 3%
     }
@@ -126,23 +168,16 @@ export default {
   }
 }
 
-  @media(max-width: 858px){
-    #logo {
-      margin-top: 30px;
-      height: 3vh;
-      width: 8vw;
-      margin-left: 5%;
-    }
-  }
   @media(max-width: 662px){
-    #logo{
+    #clogo{
       width: 20vw;
       height: 5vh;
+      margin-top: 4%;
     }
     nav{
       position: static;
     }
-    .nav-links li{
+    .cnav-links li{
       opacity: 0;
     }
     .ham-line{
@@ -158,9 +193,9 @@ export default {
       cursor: pointer;
       height: 4vh;
       right: 5%;
-      top: 5%;
+      top: 3%;
     }
-    .nav-links {
+    .cnav-links {
       position: absolute;
       display: flex;
       background: #1a1a1a;
@@ -183,11 +218,11 @@ export default {
       align-items: center;
       margin-left: auto;
       position: absolute;
-      background: #5b78c7;
+      background:rgba(0, 0, 0,0.9);
       flex-direction: column;
       clip-path: circle(100px at 90% -30%);
       -webkit-clip-path: circle(100px at 90% -30%);
-      transition: all 1.5s ease-in-out;
+      transition: all 1s ease-in-out;
     }
     #hamlinks li a{
       color: white;

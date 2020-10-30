@@ -1,11 +1,11 @@
 <template>
   <main v-for="post in allPosts" :key="post.id" class="container">
     <section class="card">
-      <img v-bind:src="'http://localhost:5000/'+post.image"  alt="thumbnail">
-      <div>
-        <h2>{{post.title}}</h2>
-        <p>{{post.description}}</p>
-      </div>
+        <img class="thumb" v-bind:src="'http://localhost:5000/'+post.image"  alt="thumbnail">
+          <div class="content">
+            <h2>{{post.title}}</h2>
+            <p>{{post.description}}</p>
+          </div>
     </section>
   </main>
 </template>
@@ -34,41 +34,114 @@ export default {
   overflow: hidden;
   position: relative;
   margin-left: 25%; 
-  margin-top: 7%;
+  margin-top: 2%;
   }
   .card h2 {
     padding-top: 10%;
     font-size: 40px;
-    margin-bottom: 3%;
+  }
+
+  .content{
+    margin-left: 2rem;
   }
   .card {
     display: grid;
     overflow: hidden;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5%;
+    grid-gap: 1rem;
     background: #dddddd;
     z-index: 4;
-    height: 40vh;
+    height: 38vh;
     color: black;
-    margin-bottom: 5%;
+    padding: 1rem;
   }
   .card img {
     height: 350px;
     width: 500px;
   }
-  .card:nth-child(even) img{
+  .container:nth-child(even) .content{
+    margin-left: 4rem;
+  }
+  .container:nth-child(even) .thumb{
     order: 2;
   }
+  @media(max-width: 800px){
+    .container {
+      margin-left: 2.5%; 
+      margin-right: 2%;
+      margin-top: 3%;
+    }
+    .card h2 {
+      padding-top: 10%;
+      font-size: 35px;
+    }
+    .card{
+      margin-bottom: -29%;
+    }
+    .content{
+      margin-left: 2rem;
+    }
+    .card img {
+      height: 250px;
+      width: 400px;
+    }
+  }
+  .container:nth-child(even) .content{
+      margin-left: 0rem;
+    }
   @media(max-width: 768px){
     .container{
-      margin-left: 7%
+      margin-left: 4%;
+      margin-right: 2%;
     }
-    .card img{
+    .card img {
       height: 250px;
       width: 400px;
     }
     .card {
-      margin-bottom: -20%
+      margin-bottom: -20%;
+      grid-gap: 1rem;
+    }
+    .container:nth-child(even) .content{
+      margin-left: 2rem;
+    }
+  }
+  @media(max-width: 414px){
+    .container{
+      margin-left: 0%;
+      margin-right: 4.5%;
+      margin-top: 1%;
+    }
+    .content {
+      z-index: 4;
+      text-align: center;
+      margin-left: 0;
+      width: 100%;
+    }
+    .card h2 {
+      font-size: 1.6rem;
+      padding-top: 5%;
+    }
+    .card img {
+      height: 250px;
+      width: 400px;
+    }
+    .card p{
+      display: none;
+    }
+    .card {
+      height: 80vh;
+      display: block;
+      margin-bottom: -70%;
+      grid-gap: 1rem;
+    }
+    .container:nth-child(even) .content{
+      margin-left: 0rem;
+    }
+  }
+  @media(max-width: 360px){
+    .card{
+      margin-bottom: -84%;
     }
   }
 </style>
