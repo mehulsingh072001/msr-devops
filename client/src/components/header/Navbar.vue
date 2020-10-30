@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav id="home">
-       <router-link to="/"><img id="logo" src="../../assets/logo.png" alt="logo"></router-link>
+       <router-link to="/"><img id="clogo" src="../../assets/logo.png" alt="logo"></router-link>
        <div class="hamburger" v-on:click="toggle">
           <div class="ham-line"></div>
           <div class="ham-line"></div>
@@ -36,7 +36,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   .btn{
     margin-top: 1%;
   }
@@ -55,7 +55,7 @@ export default {
     background: #1a1a1a;
     z-index: 1;
   }
-  #logo {
+  #clogo {
     display: flex;
     float: left;
     height: 5vh;
@@ -91,7 +91,7 @@ export default {
     border-bottom: 1px solid #3475d1;
   }
   @media(max-width: 1024px){
-    #logo {
+    #clogo {
       margin-top: 30px;
       height: 3vh;
       width: 8vw;
@@ -107,13 +107,24 @@ export default {
     .action{
       margin-left: 73%;
     }
-  #logo {
-    height: 2vh;
-    width: 1vw;
-    margin-top: 20px;
-    margin-left: -1%;
+  #clogo {
+    height: 4vh;
+    width: 15vw;
+    margin-top: 3.5%;
+    margin-left: 7%;
   }
+  .cnav-links{
+    margin-left: 38%;
   }
+  .cnav-links li {
+    padding-left: 10%;
+    margin-top: 37px;
+    list-style: none;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 24px;
+  }
+}
 
   @media(max-width: 858px){
     #logo {

@@ -1,6 +1,6 @@
 <template>
-  <div class="snav">
-    <label @change="fetchCats($event)" class="select" for="category"> I want to learn about
+  <div @change="fetchCats($event)" class="snav">
+    <label  class="select" for="category"> I want to learn about
       <select  name="category" id="category">
         <option value="everything">everything</option>
         <option value="linux">Linux</option>
@@ -13,7 +13,7 @@
 
 <script>
 
-  import { mapActions, mapGetters } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 export default {
   name: 'Selector',
   methods: {
@@ -36,31 +36,26 @@ export default {
     margin-top: 2%;
     position: relative;
 }
+option {
+  font-size: 1rem;
+}
 
 select{       
     border-top: none;
     border-bottom: 4px solid #1a1a1a;
     border-right: none;
     border-left: none;
-    font-size: 30px;       
     width: 240px;
+    font-size: 2rem;
     background: transparent;
    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
-.select:after {
-    content:"\f0dc";
-    font-family: FontAwesome;
-    color: #000;
-    position: absolute; right: 0; top: 0;
-    background: transparent;
-    z-index: 1;
-    text-align: center;
-    width: 10%;
-    height: 100%;      
-    pointer-events: none;
-    box-sizing: border-box;   
+@media(max-width: 768px){
+  .select{
+    margin-left: 14%
+  }
 }
 </style>
 

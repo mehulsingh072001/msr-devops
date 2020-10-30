@@ -59,4 +59,16 @@ export default {
   .card:nth-child(even) img{
     order: 2;
   }
+  @media(max-width: 768px){
+    .container{
+      margin-left: 7%
+    }
+    .card img{
+      height: 250px;
+      width: 400px;
+    }
+    .card {
+      margin-bottom: -20%
+    }
+  }
 </style>
