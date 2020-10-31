@@ -38,13 +38,6 @@ export default {
 </script>
 
 <style scoped>
-  .btn{
-    margin-top: 1%;
-  }
-  .action {
-    margin-left: 85%;
-    margin-right: 10%;
-  }
   #hamlinks{
     display: none;
   }
@@ -65,7 +58,7 @@ export default {
     margin-left: 5%;
   }
   .cnav-links{
-    margin-left: 60%;
+    margin-left: 55%;
   }
   .cnav-links li {
     margin-top: -5%;
@@ -91,12 +84,106 @@ export default {
     font-weight: bolder;
     border-bottom: 1px solid #3475d1;
   }
+  @media(max-width: 1638px){
+    nav {
+      height: 10vh;
+    }
+    .cnav-links{
+      margin-left: 45%;
+    }
+  }
+  @media(max-width: 1440px){
+    #clogo {
+      margin-top: 1.5rem;
+      height: 5vh;
+      width: 10vw;
+      margin-left: 3%;
+    }
+    nav {
+      height: 10vh;
+    }
+    .cnav-links{
+      margin-left: 45%;
+    }
+  }
+  @media(max-width: 1330px){
+    .cnav-links{
+      margin-left: 39%;
+    }
+  }
+  @media(max-width: 1298px){
+    .cnav-links{
+      margin-left: 35%;
+    }
+  }
+  @media(max-width: 1280px){
+    #clogo {
+      margin-top: 1.6rem;
+    }
+    .cnav-links{
+      margin-left: 39%;
+    }
+  }
+  @media(max-width: 1188px){
+    .cnav-links{
+      margin-left: 35%;
+    }
+  }
+  @media(max-width: 1115px){
+    .cnav-links{
+      margin-right: 0;
+    }
+  }
+  @media(max-width: 1108px){
+    .cnav-links{
+      margin-left: 48%;
+    }
+    .cnav-links li {
+      padding-left: 14%;
+    }
+  }
   @media(max-width: 1024px){
     #clogo {
-      margin-top: 30px;
-      height: 3vh;
-      width: 8vw;
-      margin-left: 5%;
+      margin-top: 2.5%;
+      height: 4.5vh;
+      width: 9.5vw;
+      margin-left: 3.5%;
+    }
+    .cnav-links{
+      margin-top: -0.5%;
+    }
+  }
+
+  @media(max-width: 973px){
+    .cnav-links{
+      margin-left: 45%;
+    }
+  }
+  
+  @media(max-height: 950px){
+    nav{
+      height: 10vh;
+    }
+  }
+
+  @media(max-width: 920px){
+    .cnav-links{
+      margin-right: 3%;
+      margin-left: 43%;
+    }
+  }
+
+  @media(max-width: 883px){
+    .cnav-links{
+      margin-right: 3%;
+      margin-left: 40%;
+    }
+  }
+
+  @media(max-width: 836px){
+    .cnav-links{
+      margin-right: 0%;
+      margin-left: 34%;
     }
   }
 
@@ -138,7 +225,6 @@ export default {
       border-bottom: 1px solid #3475d1;
     }
   }
-  /* ipad */
   @media(max-width: 768px){
     nav {
       height: 10vh;
@@ -229,7 +315,7 @@ export default {
       text-decoration: none;
     }
     #hamlinks.open {
-      clip-path: circle(1000px at 90% -10%);
+      clip-path: circle(2000px at 90% -10%);
       -webkit-clip-path: circle(1000% at 90% -10%);;
     }
     }

@@ -52,6 +52,14 @@ select{
     -moz-appearance: none;
     appearance: none;
 }
+@media(max-width: 1280px){
+  .select{
+    margin-left: 29%;
+  }
+  select{
+    width: 15%;
+  }
+}
 @media(max-width: 800px){
   .snav{
     margin-top: 4%;

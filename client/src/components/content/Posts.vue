@@ -65,6 +65,18 @@ export default {
   .container:nth-child(even) .thumb{
     order: 2;
   }
+  @media(max-width: 1440px){
+    .container {
+      margin-left: 17%; 
+      margin-top: 3%;
+    }
+  }
+  @media(max-width: 1280px){
+    .container {
+      margin-left: 13%; 
+      margin-top: 3%;
+    }
+  }
   @media(max-width: 800px){
     .container {
       margin-left: 2.5%; 
@@ -86,9 +98,6 @@ export default {
       width: 400px;
     }
   }
-  .container:nth-child(even) .content{
-      margin-left: 0rem;
-    }
   @media(max-width: 768px){
     .container{
       margin-left: 4%;
