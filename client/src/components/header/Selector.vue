@@ -370,7 +370,7 @@ label:before {
   }
   select{
     font-size: 1.7rem;
-    margin-left: 16%;
+    margin-left: 15%;
     width: 40%;
   }
   label:after {

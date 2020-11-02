@@ -59,9 +59,6 @@ export default {
     height: 350px;
     width: 500px;
   }
-  .container:nth-child(even) .content{
-    margin-left: 4rem;
-  }
   .container:nth-child(even) .thumb{
     order: 2;
   }
@@ -73,10 +70,74 @@ export default {
   }
   @media(max-width: 1280px){
     .container {
-      margin-left: 13%; 
+      margin-left: 11%; 
       margin-top: 3%;
     }
   }
+  @media(max-width: 1250px){
+    .container {
+      margin-left: 10%; 
+      padding-right: 6%; 
+      margin-top: 3%;
+    }
+  }
+  @media(max-width: 1200px){
+    .container {
+      margin-left: 10%; 
+      padding-right: 9%; 
+      margin-top: 3%;
+    }
+  }
+
+  @media(max-width: 1176px){
+    .card h2 {
+      padding-top: 10%;
+      font-size: 33px;
+    }
+    .content{
+      margin-left: 1rem;
+    }
+    .card img {
+      height: 300px;
+      width: 450px;
+    }
+  }
+
+  @media(max-width: 980px){
+    .container {
+      margin-left: 6%; 
+      padding-right: 7%; 
+      margin-top: 3%;
+    }
+  }
+  @media(max-width: 904px){
+    .container {
+      margin-left: 5%; 
+      padding-right: 8%; 
+      margin-top: 3%;
+    }
+    .card h2 {
+      padding-top: 5%;
+      font-size: 32px;
+    }
+    .card{
+      margin-bottom: -10%;
+      width: 98%;
+    }
+    .card img {
+      height: 250px;
+      width: 400px;
+    }
+  }
+
+  @media(max-width: 839px){
+    .container {
+      margin-left: 2%; 
+      padding-right: 6%; 
+      margin-top: 3%;
+    }
+  }
+
   @media(max-width: 800px){
     .container {
       margin-left: 2.5%; 
@@ -85,7 +146,6 @@ export default {
     }
     .card h2 {
       padding-top: 10%;
-      font-size: 35px;
     }
     .card{
       margin-bottom: -29%;
@@ -99,20 +159,95 @@ export default {
     }
   }
   @media(max-width: 768px){
-    .container{
-      margin-left: 4%;
-      margin-right: 2%;
+    .container {
+      margin-left: 1%; 
+      padding-right: 3.5%; 
+      margin-top: 3%;
     }
     .card img {
-      height: 250px;
-      width: 400px;
+      height: 230px;
+      width: 380px;
     }
     .card {
       margin-bottom: -20%;
+    }
+  }
+  @media(max-width: 750px){
+    .container {
+      margin-left: 0.5%; 
+      padding-right: 1%; 
+      margin-top: 3%;
+    }
+    .card h2 {
+      padding-top: 5%;
+      font-size: 30px;
+    }
+    .card img {
+      height: 210px;
+      width: 360px;
+    }
+    .card {
+      margin-bottom: -25%;
+    }
+    .content{
+      margin-left: 0rem;
+    }
+  }
+  @media(max-width:660px){
+    .container{
+      margin-left: 4%;
+      margin-right: 5%;
+      margin-top: 5%;
+      border-bottom: 1px solid black;
+      max-height: 60vh;
+    }
+    .content {
+      z-index: 4;
+      text-align: center;
+      margin-left: 0;
+      width: 100%;
+    }
+    .card h2 {
+      font-size: 1.6rem;
+      padding-top: 5%;
+    }
+    .card img {
+      height: 350px;
+      width:550px;
+    }
+    .card p{
+      text-align:center ;
+    }
+    .card {
+      height: 80vh;
+      display: block;
+      margin-bottom: -10%;
       grid-gap: 1rem;
     }
     .container:nth-child(even) .content{
-      margin-left: 2rem;
+      margin-left: 0rem;
+    }
+  }
+  @media(max-width:620px){
+    .container{
+      margin-left: 2%;
+      margin-right: 1%;
+      margin-top: 5%;
+      border-bottom: 1px solid black;
+      max-height: 60vh;
+    }
+  }
+  @media(max-width:600px){
+    .container{
+      margin-left: 1%;
+      margin-right: 1%;
+      margin-top: 5%;
+      border-bottom: 1px solid black;
+      max-height: 60vh;
+    }
+    .card img {
+      height: 350px;
+      width: 550px;
     }
   }
   @media(max-width: 414px){
@@ -134,9 +269,6 @@ export default {
     .card img {
       height: 250px;
       width: 400px;
-    }
-    .card p{
-      display: none;
     }
     .card {
       height: 80vh;
