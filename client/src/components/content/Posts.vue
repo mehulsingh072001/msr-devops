@@ -34,6 +34,7 @@ export default {
   overflow: hidden;
   position: relative;
   margin-left: 25%; 
+  padding: 1rem;
   margin-top: 2%;
   }
   .card h2 {

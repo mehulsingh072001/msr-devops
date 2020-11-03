@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="btn">Call To Action</button>
+    <button class="btn">Hire Us</button>
   </div>
 </template>
 
@@ -12,21 +12,24 @@ export default {
 
 <style >
   .btn{
-    font-size: 19px;
-    font-weight: normal;
-    font-family: none;
-    padding: 15px 32px;
-    padding-top: 17px;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px 30px;
     overflow: hidden;
-    position: absolute;
     cursor: pointer;
     color: white;
     text-decoration: none;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 15px;
     border: none;
     background: #3475d1;
     z-index: 4;
+  }
+  .btn:hover{
+    background: transparent;
+    border: 1px solid #3475d1;
+    color: #3475d1;
+    transition: all 0.4s ease-in;
   }
   @media(max-width: 768px) {
     .action {

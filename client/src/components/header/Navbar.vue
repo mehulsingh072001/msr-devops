@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav id="home">
+    <nav id="nav">
        <router-link to="/"><img id="clogo" src="../../assets/logo.png" alt="logo"></router-link>
        <div class="hamburger" v-on:click="toggle">
           <div class="ham-line"></div>
@@ -43,7 +43,6 @@ export default {
   }
   nav {
     overflow: hidden;
-    font-family: none;
     height: 10vh;
     width: 100%;
     background: #1a1a1a;
@@ -61,9 +60,8 @@ export default {
     margin-left: 55%;
   }
   .cnav-links li {
-    margin-top: -5%;
     padding-left: 20%;
-    margin-top: 37px;
+    margin-top: 30px;
     list-style: none;
     overflow: hidden;
     display: inline-block;
@@ -82,7 +80,6 @@ export default {
     color: #3475d1;
     text-decoration: none;
     font-weight: bolder;
-    border-bottom: 1px solid #3475d1;
   }
   @media(max-width: 1638px){
     nav {
@@ -273,13 +270,13 @@ export default {
       margin: 5px;
     }
     .hamburger{
-      position: absolute;
+      position: relative;
       overflow: hidden;
       z-index: 100;
       cursor: pointer;
       height: 4vh;
-      right: 5%;
-      top: 3%;
+      margin-left: 90%;
+      margin-top: 5%;
     }
     .cnav-links {
       position: absolute;

@@ -1,12 +1,16 @@
 <template>
   <div>
     <div class="header">
-      <Tnav/>
+      <CallToAction class="action"/>
+      <router-link to="/"><img id="llogo" src="../assets/logo.png" alt="logo"></router-link>
+      <Ham/>
       <div id="overlay"></div>
       <img src="../assets/handshake.jpg" alt="handshake">
       <IntroText/>
       <ScrollBtn />
     </div>
+      <Navbar/>
+      <button v-if="isVisible" @click="scrollTop" id="stop"><i class="fas fa-angle-up"></i></button>
     <MissionStatement/>
     <Benifits />
     <LastCall />
@@ -15,18 +19,21 @@
 </template>
 
 <script>
-import Tnav from "../components/header/Tnav.vue"
+import Navbar from "../components/header/Navbar.vue"
+import Ham from "../components/header/Ham.vue"
 import Footer from "../components/footer/Footer.vue"
 import MissionStatement from "../components/content/MissionStatement.vue"
+import CallToAction from '../components/CallToAction'
 import IntroText from "../components/header/IntroText.vue"
 import ScrollBtn from "../components/header/ScrollBtn.vue"
 import Benifits from "../components/content/Benifits.vue"
 import LastCall from "../components/content/LastCall.vue"
-
 export default {
   name: 'Home',
   components: {
-    Tnav,
+    Navbar,
+    Ham,
+    CallToAction,
     IntroText,
     ScrollBtn,
     MissionStatement,
@@ -34,22 +41,67 @@ export default {
     LastCall,
     Footer
   },
+  data(){
+    return {
+      isVisible: false
+    }
+  },
+  unmounted: function() {
+    document.removeEventListener('scroll', this.scrollTop)
+  },
+  mounted(){
+    window.addEventListener('scroll', this.initTopButton);
+    this.initTopButton(); // needed for initial loading on page
+  },
+  methods: {
+    initTopButton(){
+      if(window.scrollY > 500){
+        this.isVisible = true
+      }else {
+        this.isVisible = false
+      }
+    },
+    scrollTop(){
+      return scrollTo(document.body, 0)
+      }
+    }
 }
 </script>
 
 <style>
-body{
-  overflow-x: hidden
-}
-#tnav {
-  position: absolute;
-}
-
-button {
-  position: fixed;
-  z-index: 1;
-}
-
+  #llogo {
+    position: absolute;
+    height: 5vh;
+    width: 8vw;
+    z-index: 12;
+    margin-left: 4%;
+    margin-top: 1.4%;
+  }
+  #stop{
+    cursor: pointer;
+    background:rgba(0, 0, 0,0.7);
+    padding: 1rem;
+    font-size: 2rem;
+    border: none;
+    color: white;
+    height: 7vh;
+    width: 5vw;
+    position: fixed;
+    bottom:0 ;
+    right:0 ;
+    left:95% ;
+    
+  }
+  .action{
+    margin-left: 85%;
+    margin-top: 1.3%;
+    position: absolute;
+    z-index: 30;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+  }
 
 #overlay {
   position: absolute;
@@ -65,15 +117,9 @@ button {
 
 img {
   width: 100%;
-  height: 100vh;
+  height: 99.5vh;
 }
 @media(max-width: 1024px){
-  #logo {
-    margin-top: 30px;
-    height: 3vh;
-    width: 8vw;
-    margin-left: 5%;
-  }
 }
 @media(max-width: 768px){
   img {
@@ -84,27 +130,9 @@ img {
   }
 }
 @media(max-width: 858px){
-    nav{
-      position: static;
-    }
-  #logo {
-    margin-top: 30px;
-    height: 3vh;
-    width: 8vw;
-    margin-left: 5%;
-  }
 }
 @media(max-width: 414px){
-  #logo{
-    width: 20vw;
-    height: 5vh;
   }
-}
 @media(max-width: 500px){
-  #logo{
-    width: 20vw;
-    height: 5vh;
-  }
-
 }
 </style>

@@ -14,7 +14,7 @@ export default {
   },
   methods: {
     scrollToElement(){
-    var elmnt = document.getElementById("stat")
+    var elmnt = document.getElementById("nav")
       elmnt.scrollIntoView()
     }
   }

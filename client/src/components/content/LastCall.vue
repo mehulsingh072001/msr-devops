@@ -21,7 +21,6 @@ export default {
 <style scoped>
   .last{
     background: #1a1a1a;
-    position: relative ;
     color: #dddddd;
     height: 600px;
     width: 100%;
@@ -36,7 +35,6 @@ export default {
   h1 {
     font-size: 70px;
     text-align: center;
-    z-index: -4;
   }
   p {
     margin-top: 2%;
