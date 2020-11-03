@@ -7,6 +7,7 @@
       <div id="overlay"></div>
       <img src="../assets/handshake.jpg" alt="handshake">
       <IntroText/>
+      <Form/>
       <ScrollBtn />
     </div>
       <Navbar/>
@@ -20,6 +21,7 @@
 
 <script>
 import Navbar from "../components/header/Navbar.vue"
+import Form from "../components/header/Form.vue"
 import Ham from "../components/header/Ham.vue"
 import Footer from "../components/footer/Footer.vue"
 import MissionStatement from "../components/content/MissionStatement.vue"
@@ -32,6 +34,7 @@ export default {
   name: 'Home',
   components: {
     Navbar,
+    Form,
     Ham,
     CallToAction,
     IntroText,
@@ -39,7 +42,7 @@ export default {
     MissionStatement,
     Benifits,
     LastCall,
-    Footer
+    Footer,
   },
   data(){
     return {
@@ -77,20 +80,26 @@ export default {
     margin-left: 4%;
     margin-top: 1.4%;
   }
+  @keyframes fadeIn {
+     0% {opacity: 0;}
+     100% {opacity: 1;}
+  } 
   #stop{
     cursor: pointer;
     background:rgba(0, 0, 0,0.7);
-    padding: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     border: none;
     color: white;
-    height: 7vh;
-    width: 5vw;
+    height: 5vh;
+    width: 3vw;
     position: fixed;
     bottom:0 ;
-    right:0 ;
-    left:95% ;
-    
+    animation: fadeIn 1s;
+    left:97% ;
+    transition: all 0.5s ease-in-out;
+  }
+  #stop:hover{
+    background: #3475d1;
   }
   .action{
     margin-left: 85%;

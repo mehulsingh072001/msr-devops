@@ -10,7 +10,7 @@ export default {
   components: {
   },
   mounted() {
-//    return scrollTo(document.body, 0)
+    return scrollTo(document.body, 0)
   }
 }
 </script>

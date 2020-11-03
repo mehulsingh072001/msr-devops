@@ -26,11 +26,19 @@ export default {
     cursor: pointer;
     font-size: 50px;
     z-index: 0;
-    top: 70vh;
+    top: 91vh;
     position: absolute;
-    right: 50%;
+    right: 47.5%;
     background: transparent;
     color: white;
     border: none;
+  }
+  label{
+    position: absolute;
+    z-index: 12;
+    color: white;
+    font-size: 1.2rem;
+    top: 96vh;
+    right: 44%;
   }
 </style>

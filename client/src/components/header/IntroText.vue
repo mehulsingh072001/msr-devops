@@ -37,10 +37,10 @@ export default {
   text-align: center;
   font-family: Roboto, Arial, sans-serif;
   height: 90vmin;
-  left: 55%;
+  left: 53.2%;
   overflow: hidden;
   position: absolute;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%);
   width: 90vmin;
 }

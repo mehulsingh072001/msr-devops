@@ -46,6 +46,7 @@ export default {
     height: 10vh;
     width: 100%;
     background: #1a1a1a;
+    position: sticky;
     z-index: 1;
   }
   #clogo {
