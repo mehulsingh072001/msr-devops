@@ -2,7 +2,7 @@
   <form action="">
     <input type="text" placeholder="Name*">
     <input type="email" placeholder="E-mail*">
-    <button>Send me steps to grow my business</button>
+    <button>Show me steps to build my online presence</button>
   </form>
 </template>
 

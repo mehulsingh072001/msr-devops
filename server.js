@@ -7,6 +7,7 @@ const cors = require('cors');
 //Import Routes
 const blogRoute = require('./routes/api/blog')
 const authRoute = require('./routes/api/auth')
+const headMailRoute = require('./routes/api/headForm')
 
 const app = express();
 app.use(cors())
@@ -23,7 +24,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
-
+app.use(express.json())
 app.use(cors());
 
 app.use('/public', express.static(path.join(__dirname, 'public')));
@@ -38,6 +39,7 @@ mongoose.connect(db)
 //Use Routes
 app.use('/api/blog', blogRoute)
 app.use('/api/user', authRoute)
+app.use('/api/info', headMailRoute)
 
 
 const port = process.env.PORT || 5000;
