@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const Mail = require('../../models/mail')
+const Mail = require('../../models/headInfo')
 router.get('/info', (req, res) => {
     HeadMail.find()
         .sort({ date: -1})
