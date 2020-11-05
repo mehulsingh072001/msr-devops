@@ -1,14 +1,32 @@
 <template>
-  <form action="">
-    <input type="text" placeholder="Name*">
-    <input type="email" placeholder="E-mail*">
-    <button>Show me steps to build my online presence</button>
+  <form @submit="onSubmit">
+    <input type="text" v-model="name"  placeholder="Name*">
+    <input type="text" v-model="email" placeholder="E-mail*">
+    <input type="submit" value="submit">
   </form>
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
-  name: 'form'
+  name: 'form',
+  data() {
+    return {
+        name: '',
+        email: ''
+    }
+  },
+  methods: {
+    ...mapActions(['fillForm']),
+    onSubmit(e){
+      const newInfo = {
+        name: this.name,
+        email: this.email
+      }
+      e.preventDefault()
+      this.fillForm(newInfo)
+    }
+  }
 }
 </script>
 
