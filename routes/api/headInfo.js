@@ -7,12 +7,12 @@ router.get('/info', (req, res) => {
         .sort({ date: -1})
         .then(headMails => res.json(headMails));
 });
-router.post('/', (req, res) => {
+router.post('/',(req, res) => {
     const info = new Mail({
         name: req.body.name,
         email: req.body.email
     });
-    info.save().then(mail => res.json(mail))
+    info.save().then(mail => res.json(mail)) 
 })
 
 module.exports = router;

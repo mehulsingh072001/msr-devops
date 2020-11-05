@@ -1,9 +1,9 @@
 <template>
-  <form @submit="onSubmit">
+  <div>
     <input type="text" v-model="name"  placeholder="Name*">
     <input type="text" v-model="email" placeholder="E-mail*">
-    <input type="submit" value="submit">
-  </form>
+    <button v-on:click="submitInfo()">How to build my business presence</button>
+  </div>
 </template>
 
 <script>
@@ -18,13 +18,13 @@ export default {
   },
   methods: {
     ...mapActions(['fillForm']),
-    onSubmit(e){
+    submitInfo(){
       const newInfo = {
         name: this.name,
         email: this.email
       }
-      e.preventDefault()
       this.fillForm(newInfo)
+      this.$router.push("/private");
     }
   }
 }
@@ -35,7 +35,7 @@ export default {
    0% {opacity: 0;}
    100% {opacity: 1;}
 }
-form{
+div{
   position: absolute;
   z-index: 12;
   top: 65vh;
