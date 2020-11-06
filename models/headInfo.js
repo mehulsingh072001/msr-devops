@@ -5,9 +5,11 @@ const MailSchema = new mongoose.Schema({
     name: {
         type: String,
         min: 6,
+        required: true,
         max: 255
     },
     email: {
+        required: true,
         type: String,
         min: 6,
         max: 255
