@@ -8,16 +8,11 @@ router.get('/info', (req, res) => {
         .then(headMails => res.json(headMails));
 });
 router.post('/',(req, res) => {
-
     const info = new Mail({
         name: req.body.name,
         email: req.body.email
     });
-    try{
-         info.save();
-    }catch(err) {
-        res.status(400).send(err);
-    }
+    info.save().then(mail => res.json(mail)) 
 })
 
 module.exports = router;
