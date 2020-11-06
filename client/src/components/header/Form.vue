@@ -1,8 +1,9 @@
 <template>
   <div>
-    <input type="text" v-model="name"  placeholder="Name*">
-    <input type="text" v-model="email" placeholder="E-mail*">
+    <input type="text" id="name" v-model="name"  placeholder="Name*">
+    <input type="email" id="email" v-model="email" placeholder="E-mail*">
     <button v-on:click="submitInfo()">How to build my business presence</button>
+    <p id="demo"></p>
   </div>
 </template>
 
@@ -19,13 +20,20 @@ export default {
   methods: {
     ...mapActions(['fillForm']),
     submitInfo(){
+      var name = document.getElementById("name")
+      if(name.value === ""){
+        name.style.border = "1px solid red"
+      }
+      var email = document.getElementById("email")
+      if(email.value === ""){
+        email.style.border = "1px solid red"
+      }
       const newInfo = {
         name: this.name,
         email: this.email
       }
       this.fillForm(newInfo)
-      this.$router.push("/private");
-    }
+    },
   }
 }
 </script>
@@ -41,22 +49,26 @@ div{
   top: 65vh;
   animation: showForm 3s;
   animation-fill-mode: forwards;
+  border: none;
   width: 100%;
   left: 20%;
 }
 input{
   margin-left: 1%;
   border-radius: 2rem;
+  border: 1px solid #3475d1;
   background:rgba(0, 0, 0,0.3);
   color: white;
   padding: 1rem;
-  appearance: none;
-  width:16%
+  width:16%;
 }
-input:focus{
-  border-color: #3475d1;
-  border-radius: 2rem;
-  transition: all 0.5s;
+p {
+  padding: 2rem;
+  color: white;
+}
+input:required {
+  border: none;
+  outline: none;
 }
 button {
   margin-left: 1%;
