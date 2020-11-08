@@ -6,7 +6,7 @@ const state = {
 
 const actions = {
   async fillForm({ commit }, {name, email}){
-    const response = await axios.post('http://localhost:5000/api/info', {name, email, completed: false })
+    const response = await axios.post('http://localhost:5000/api/info', {name, email })
     commit('newFill', response.data)
   }
 }

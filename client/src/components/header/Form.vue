@@ -1,10 +1,10 @@
 <template>
   <div class="name">
-    <input type="text" id="name" v-model="name"  placeholder="Name*">
+    <input type="text" required id="name" v-model="name"  placeholder="Name*">
     <p id="lname"></p>
   </div>
   <div class="email">
-    <input type="text" id="email" v-model="email" placeholder="E-mail*">
+    <input type="text" required id="email" v-model="email" placeholder="E-mail*">
     <p id="lmail"></p>
   </div>
     <button v-on:click="submitInfo()">How to build my business presence</button>
@@ -23,16 +23,6 @@ export default {
   methods: {
     ...mapActions(['fillForm']),
     submitInfo(){
-      var name = document.getElementById("name")
-      if(name.value === ""){
-        name.style.border = "1px solid red"
-        document.getElementById("lname").innerHTML = "*Name required"
-      }
-      var email = document.getElementById("email")
-      if(email.value === ""){
-        email.style.border = "1px solid red"
-        document.getElementById("lmail").innerHTML = "*Email required"
-      }
       const newInfo = {
         name: this.name,
         email: this.email
@@ -93,6 +83,10 @@ input{
   font-size: 1.2rem;
 }
 
+input:required:invalid{
+  border-color: red;
+  outline: none
+}
 button {
   position: absolute;
   margin-left: 1%;

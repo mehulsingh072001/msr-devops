@@ -3,9 +3,9 @@ const mongoose = require('mongoose');
 //Create Schema
 const MailSchema = new mongoose.Schema({
     name: {
+        required: true,
         type: String,
         min: 6,
-        required: true,
         max: 255
     },
     email: {

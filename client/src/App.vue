@@ -21,6 +21,7 @@ html{
   font-family: 'Roboto', sans-serif;
   font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
+  outline: none;
 }
 body{
   background: #dddddd;

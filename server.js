@@ -7,6 +7,7 @@ const cors = require('cors');
 //Import Routes
 const blogRoute = require('./routes/api/blog')
 const authRoute = require('./routes/api/auth')
+const appointmentCreateRoute = require('./routes/api/appointments')
 const headInfoRoute = require('./routes/api/headInfo')
 
 const app = express();
@@ -48,6 +49,7 @@ mongoose.connect(db)
 app.use('/api/blog', blogRoute)
 app.use('/api/user', authRoute)
 app.use('/api/info', headInfoRoute)
+app.use('/api/', appointmentCreateRoute)
 
 
 const port = process.env.PORT || 5000;
