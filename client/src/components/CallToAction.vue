@@ -89,10 +89,10 @@ export default {
   }
 
   .fade-enter-active, .fade-leave-active {
-    transition: opacity .5s;
+    animation: animateOpen 0.3s;
   }
-  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    opacity: 0;
+  .fade-enter, .fade-leave-to {
+    animation: animateClose 0.3s;
   }
   @media(max-width: 768px) {
     .action {
