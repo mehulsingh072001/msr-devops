@@ -1,13 +1,15 @@
 <template>
-  <div class="name">
-    <input type="text" required id="name" v-model="name"  placeholder="Name*">
-    <p id="lname"></p>
+  <div>
+    <div class="name">
+      <input type="text" required id="name" v-model="name"  placeholder="Name*">
+      <p id="lname"></p>
+    </div>
+    <div class="email">
+      <input type="text" required id="email" v-model="email" placeholder="E-mail*">
+      <p id="lmail"></p>
+    </div>
+      <button v-on:click="submitInfo()">How to build my business presence</button>
   </div>
-  <div class="email">
-    <input type="text" required id="email" v-model="email" placeholder="E-mail*">
-    <p id="lmail"></p>
-  </div>
-    <button v-on:click="submitInfo()">How to build my business presence</button>
 </template>
 
 <script>
