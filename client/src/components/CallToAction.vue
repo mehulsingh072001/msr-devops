@@ -51,8 +51,14 @@ export default {
     from{top: 0; opacity: 1;}
     to{top: -300px; opacity: 0;}
   } 
+@keyframes showButton {
+   0% {opacity: 0;}
+   100% {opacity: 1;}
+}
   #action{
     z-index: 16;
+    animation: showButton 3s;
+    animation-fill-mode: forwards;
   }
   .btn{
     font-size: 22px;

@@ -7,7 +7,6 @@
       <div id="overlay"></div>
       <img src="../assets/handshake.jpg" alt="handshake">
       <IntroText/>
-      <Form/>
       <ScrollBtn />
     </div>
       <Navbar/>
@@ -21,7 +20,6 @@
 
 <script>
 import Navbar from "../components/header/Navbar.vue"
-import Form from "../components/header/Form.vue"
 import Ham from "../components/header/Ham.vue"
 import Footer from "../components/footer/Footer.vue"
 import MissionStatement from "../components/content/MissionStatement.vue"
@@ -34,7 +32,6 @@ export default {
   name: 'Home',
   components: {
     Navbar,
-    Form,
     Ham,
     CallToAction,
     IntroText,
@@ -103,14 +100,13 @@ export default {
   }
   .action{
     position: absolute;
-    top: 2.5%;
-    bottom: 0%;
-    left: 85%;
+    top: 55%;
+    bottom: 10%;
+    left: 47%;
     right: 5%;
   }
 
-#overlay {
-  position: absolute;
+#overlay { position: absolute;
   display: block;
   width: 100%;
   height: 100vh;

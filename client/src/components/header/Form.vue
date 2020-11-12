@@ -64,7 +64,7 @@ export default {
   border: none;
   width: 100%;
   height: 100%;
-  left: 22%;
+  left: 23%;
 }
 input{
   margin-left: 1%;

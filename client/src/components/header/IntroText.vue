@@ -2,11 +2,12 @@
   <div class="animated-title">
     <div class="text-top">
       <div>
-        <span>Hello World</span>
+        <span>Build your web presence</span>
       </div>
     </div>
     <div class="text-bottom">
-      <div>for Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dignissimos ipsa accusamus est nulla reprehenderit libero quaerat. Sint quam debitis pariatur beatae placeat repellendus enim reiciendis perspiciatis, asperiores aspernatur deserunt. the win!</div>
+      <div><p>We recommend you to book your call quickly. We cannot offer this session for free for
+        long time. Get in now before we have to start charging again.</p></div>
     </div>
     <div class="line"></div>
   </div>
@@ -35,17 +36,16 @@ export default {
   color: white;
   z-index: 0;
   text-align: center;
-  font-family: Roboto, Arial, sans-serif;
   height: 90vmin;
-  left: 53.2%;
+  left: 55%;
   overflow: hidden;
   position: absolute;
   top: 40%;
   transform: translate(-50%, -50%);
-  width: 90vmin;
+  width: 100%;
 }
 .animated-title > div {
-  left: 15%;
+  left: 20.5%;
   height: 50%;
   overflow: hidden;
   position: absolute;
@@ -56,17 +56,17 @@ export default {
   position: absolute;
 }
 .animated-title > div div span {
-  font-size: 10vmin;
+  font-size: 5rem;
   display: block;
 }
 .animated-title > div.line{
-  width: 1px;
   border-bottom: 3px solid #3475d1;
   animation: line 1s;
   animation-delay: .5s;
   animation-fill-mode: forwards;
+  max-width: 60%;
   top: 0;
-  left: -12%;
+  left: 17%;
 }
 .animated-title > div.text-top div {
   animation: showTopText 1s;
@@ -79,7 +79,9 @@ export default {
 }
 .animated-title > div.text-bottom {
   bottom: 0;
-  left: -12%;
+  font-size: 1.5rem;
+  left: 12.5%;
+  max-width:60%;
 }
 .animated-title > div.text-bottom div {
   left: 15%;
@@ -91,23 +93,27 @@ export default {
 }
 @media(max-width: 768px){
 .animated-title > div.text-bottom div {
-  left: 15%;
-    text-align: center;
+    left: 15%;
   }
   .animated-title {
     left: 56%;
     top: 35%;
   }
   .animated-title > div {
-    left: 10%;
-    height: 50%;
-    overflow: hidden;
-    position: absolute;
-    width: 100%;
+    left: -1%;
   }
   .animated-title > div div span {
-    font-size: 12vmin;
-    display: block;
+    font-size: 3.5rem;
+  }
+  .animated-title > div.line{
+    max-width: 105%;
+    top: 0;
+    left: -10%;
+  }
+  .animated-title > div.text-bottom {
+    font-size: 1.3rem;
+    left: -12%;
+    max-width:100%;
   }
 }
 </style>

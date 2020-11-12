@@ -1,7 +1,7 @@
 <template>
   <div id="stat">
-    <span>Mission Statement</span>
-    <p>Ipsum minus odio officiis perferendis corrupti Facilis cum nostrum porro eius omnis sapiente?</p>
+    <span>We build your Web Presence!!</span>
+    <p>At MSR consultants we reinvent your business.</p>
   </div>
 </template>
 
@@ -17,10 +17,9 @@ export default {
   text-align: center;
   width: 70%;
   padding-bottom: 2rem;
-  padding-top: 2rem;
   margin: auto;
   margin-top: 3%;
- border-bottom: 1px solid #1a1a1a;
+  border-bottom: 1px solid #1a1a1a;
 }
 span{ 
   font-weight: bold;
@@ -29,6 +28,7 @@ span{
 }
 p {
   padding-top: 2%;
+  font-size: 1.5rem;
   color: black;
 }
 </style>

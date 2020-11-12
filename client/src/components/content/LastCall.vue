@@ -1,8 +1,8 @@
 <template>
   <div class="last">
     <div class="text">
-      <h1>Last call</h1>
-      <p>Lorem earum modi repellendus enim similique. A at expedita ut deleniti veniam inventore. Atque ipsa tempore sapiente consequuntur quis, ea aut Quisquam rerum est esse quam nihil dolore et quos assumenda Quis harum natus deserunt sed commodi? Autem ut eius quos reiciendis reprehenderit? Dolores libero reiciendis non aliquid nihil Sint.</p>
+      <h1>Why us ?</h1>
+      <p></p>
     <CallToAction id="call"/>
     </div>
   </div>
@@ -26,7 +26,6 @@ export default {
     width: 100%;
   }
   .text{
-    padding-top: 5%;
     overflow: hidden;
     width: 100%;
     text-align: center;
@@ -35,6 +34,10 @@ export default {
   h1 {
     font-size: 70px;
     text-align: center;
+    padding: 1%;
+    margin-left: 40%;
+    border-bottom: 1px dashed #dddddd;
+    max-width: 20%;
   }
   p {
     margin-top: 2%;

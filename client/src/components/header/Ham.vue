@@ -65,7 +65,7 @@ export default {
     cursor: pointer;
   }
   .toggleBtn:hover{
-    background: #3475d1;
+    color: #3475d1;
   }
     #hamlinks li a{
       color: white;
