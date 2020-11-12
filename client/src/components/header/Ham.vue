@@ -1,14 +1,17 @@
 <template>
-  <div class="hamburger" v-on:click="toggle">
-    <div class="ham-line"></div>
-    <div class="ham-line"></div>
-    <div class="ham-line"></div>
-  </div>
-  <ul id="hamlinks" :class="{'open': isOpen}">
-      <li><router-link to="/"><i class="fa fa-fw fa-home"></i> Home</router-link></li>
-      <li><router-link to="/about"><i class="fa fa-fw fa-wrench"></i> About</router-link></li>
-      <li><router-link to="/blog"><i class="fas fa-blog"></i> Blog</router-link></li>
-   </ul>
+   <div>
+    <div class="hamburger" v-on:click="toggle">
+      <div class="ham-line"></div>
+      <div class="ham-line"></div>
+      <div class="ham-line"></div>
+    </div>
+    <ul id="hamlinks" :class="{'open': isOpen}">
+      <button v-on:click="toggle" class="toggleBtn">&times;</button>
+        <li><router-link to="/"><i class="fa fa-fw fa-home"></i> Home</router-link></li>
+        <li><router-link to="/about"><i class="fa fa-fw fa-wrench"></i> About</router-link></li>
+        <li><router-link to="/blog"><i class="fas fa-blog"></i> Blog</router-link></li>
+     </ul>
+   </div>
 </template>
 
 <script>
@@ -29,7 +32,7 @@ export default {
 
 <style scoped>
   #hamlinks {
-    z-index:99;
+    z-index:16;
     display: flex;
     list-style: none;
     font-size: 1.6rem;
@@ -46,6 +49,24 @@ export default {
     transition: all 0.4s ease-in;
   }
 
+  .toggleBtn{
+    color: white;
+    position: absolute;
+    z-index: 99;
+    background-color: rgba(0,0,0,0.8);
+    border:none ;
+    font-size: 2rem;
+    font-weight: bold;
+    bottom: 92%;
+    left: 93.2%;
+    right: 2%;
+    transition: 0.5s;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  .toggleBtn:hover{
+    background: #3475d1;
+  }
     #hamlinks li a{
       color: white;
       border-bottom: 3px solid #3475d1;
@@ -76,10 +97,21 @@ export default {
       left: 0;
       position: absolute;
       overflow: hidden;
-      z-index: 100;
+      z-index: 12;
       cursor: pointer;
       height: 4vh;
       margin-top: 1.8%;
       margin-left: 95%;
+    }
+    @media(max-width: 768px){
+      .hamburger{
+        margin-left: 0%;
+        left: 91%;
+        margin-top: 4.5%;
+      }
+      .toggleBtn{
+        left: 86%;
+      bottom: 92%;
+      }
     }
 </style>

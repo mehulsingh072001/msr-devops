@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import url('https://fonts.googleapis.com/css?family=Roboto:700');
 @keyframes line {
   100% { width: 100%}
@@ -93,6 +93,21 @@ export default {
 .animated-title > div.text-bottom div {
   left: 15%;
     text-align: center;
+  }
+  .animated-title {
+    left: 55%;
+    top: 35%;
+  }
+  .animated-title > div {
+    left: 10%;
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+  }
+  .animated-title > div div span {
+    font-size: 12vmin;
+    display: block;
   }
 }
 </style>

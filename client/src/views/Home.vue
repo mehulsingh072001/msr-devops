@@ -102,14 +102,11 @@ export default {
     background: #3475d1;
   }
   .action{
-    margin-left: 85%;
-    margin-top: 1.3%;
     position: absolute;
-    z-index: 30;
-    top: 0%;
+    top: 2.5%;
     bottom: 0%;
-    left: 0%;
-    right: 0%;
+    left: 85%;
+    right: 5%;
   }
 
 #overlay {
@@ -132,10 +129,23 @@ img {
 }
 @media(max-width: 768px){
   img {
-    height: 90vh;
+    height: 100vh;
+  }
+  #llogo {
+    position: absolute;
+    height: 4vh;
+    width: 15vw;
+    z-index: 12;
+    margin-left: 5%;
+    margin-top: 4%;
   }
   #overlay{
-    height: 90vh;
+    height: 100vh;
+  }
+  .action{
+    position: absolute;
+    top: 2.4%;
+    left: 65%;
   }
 }
 @media(max-width: 858px){

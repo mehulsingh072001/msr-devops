@@ -11,7 +11,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 #stat {
   position: relative;
   text-align: center;
@@ -25,8 +25,10 @@ export default {
 span{ 
   font-weight: bold;
   font-size: 40px;
+  color: black;
 }
 p {
   padding-top: 2%;
+  color: black;
 }
 </style>

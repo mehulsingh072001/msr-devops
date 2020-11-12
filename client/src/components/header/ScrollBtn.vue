@@ -25,7 +25,7 @@ export default {
   button {
     cursor: pointer;
     font-size: 50px;
-    z-index: 0;
+    z-index: 12;
     top: 91vh;
     position: absolute;
     right: 47.5%;

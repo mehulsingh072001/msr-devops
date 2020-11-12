@@ -13,10 +13,13 @@
     "@fortawesome/vue-fontawesome": "^2.0.0",
     "axios": "^0.20.0",
     "core-js": "^3.6.5",
+    "joi": "^17.3.0",
+    "vee-validate": "^3.4.5",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vue-scrollactive": "^0.9.3",
     "vue-scrollto": "^2.19.1",
+    "vuelidate": "^0.7.6",
     "vuex": "^4.0.0-0"
   },
   "proxy": "http://localhost:5000",

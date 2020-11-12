@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <button v-on:click="PopOpen" class="btn">Let's talk</button>
+  <div id="action">
+    <button v-on:click="PopOpen" @keydown.esc="isOpen = false" class="btn">Let's talk</button>
       <transition name="fade" v-on:enter="enter">
-        <div  id="modal" v-if="isOpen">
-          <div class="modal-content">
+        <div id="modal"  v-if="isOpen">
           <button v-on:click="PopClose" class="closeBtn">&times;</button>
-            <p>Some text in the modal</p>
+          <div class="modal-content">
+             <h1 class="heading">Book Your Appointment !</h1>
           </div>
         </div>
     </transition>
@@ -18,18 +18,31 @@ export default {
   data: () => ({
     isOpen: false
   }),
+  mounted(){
+    window.onclick = this.isOpen
+  },
+  computed:{
+  },
   methods: {
     PopOpen() {
       this.isOpen = true
     },
     PopClose() {
       this.isOpen = false
+    },
+    return(){
+    var modal = this.isOpen
+    window.onclick = function(event){
+      if(event.target == modal){
+        modal = false
+      }
+    }
     }
   }
 }
 </script>
 
-<style >
+<style scoped>
   @keyframes animateOpen{
     from{top: -300px; opacity: 0;}
     to{top: 0; opacity: 1;}
@@ -38,6 +51,9 @@ export default {
     from{top: 0; opacity: 1;}
     to{top: -300px; opacity: 0;}
   } 
+  #action{
+    z-index: 16;
+  }
   .btn{
     font-size: 22px;
     font-weight: bold;
@@ -50,53 +66,89 @@ export default {
     border-radius: 15px;
     border: none;
     background: #3475d1;
-    z-index: 4;
   }
 
   .btn:hover{
     background: transparent;
     border: 1px solid #3475d1;
     color: #3475d1;
-    transition: all 0.4s ease-in;
+    transition: all 0.2s ease-in;
   }
 
   .closeBtn{
-    z-index: 12;
+    z-index: 300;
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+    margin-left: 95%;
+    margin-top: 0.8%;
+    border: none;
+    font-size: 2.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s;
+  }
+  .closeBtn:hover{
+    color: #3475d1;
   }
 
   #modal{
+    z-index: 20;
     position: fixed;
-    z-index:12 ;
     left: 0;
+    transition: all 0.5s;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+    background:rgba(0, 0, 0,0.9);
   }
 
+  .overlay {
+    width: 100vw;
+    height: 100vh;
+  }
   p {
     color: black;
   }
   /* Modal Content/Box */
   .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    background-color: #dddddd;
+    text-align: center;
+    height: 80vh;
+    margin: auto; 
+    border-radius: 1rem;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%; 
   }
 
+  .heading{
+    color: black;
+    border-bottom: 3px solid #3475d1;
+    margin-left: 35%;
+    margin-top: 0.5%;
+    width: 30%;
+    padding: 0.5rem;
+  }
   .fade-enter-active, .fade-leave-active {
-    animation: animateOpen 0.3s;
+    animation: animateOpen 0.5s;
   }
   .fade-enter, .fade-leave-to {
-    animation: animateClose 0.3s;
+    animation: animateClose 0.8s;
   }
   @media(max-width: 768px) {
-    .action {
-      margin-right: 10%;
-    }
+  .btn{
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px 30px;
+    overflow: hidden;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 15px;
+    border: none;
+    background: #3475d1;
+  }
   }
 </style>

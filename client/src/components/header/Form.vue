@@ -1,12 +1,8 @@
 <template>
   <div>
-    <div class="name">
-      <input type="text" required id="name" v-model="name"  placeholder="Name*">
-      <p id="lname"></p>
-    </div>
-    <div class="email">
-      <input type="text" required id="email" v-model="email" placeholder="E-mail*">
-      <p id="lmail"></p>
+    <div class="input-fields">
+      <input type="text" :class="{'wrong-input': !valid}" id="name" v-model="name"  placeholder="Name*">
+      <input type="text" :class="{'wrong-input': !valid}" id="email" v-model="email" placeholder="E-mail*">
     </div>
       <button v-on:click="submitInfo()">How to build my business presence</button>
   </div>
@@ -19,17 +15,36 @@ export default {
   data() {
     return {
         name: '',
-        email: ''
+        email: '',
+        animation: '',
+        valid: true
     }
   },
   methods: {
     ...mapActions(['fillForm']),
     submitInfo(){
+      var valid = true;
+      if(this.name===''){
+        valid = false
+        this.valid = false
+      }else{
+        this.valid = true
+      }
+      if(this.email===''){
+        valid = false
+        this.valid = false
+      }else{
+        this.valid = true
+      }
+      if(valid){
       const newInfo = {
         name: this.name,
         email: this.email
       }
       this.fillForm(newInfo)
+      }else{
+        this.valid = false
+      }
     },
   }
 }
@@ -40,7 +55,7 @@ export default {
    0% {opacity: 0;}
    100% {opacity: 1;}
 }
-.name{
+.input-fields{
   position: absolute;
   z-index: 12;
   top: 65vh;
@@ -48,46 +63,27 @@ export default {
   animation-fill-mode: forwards;
   border: none;
   width: 100%;
+  height: 100%;
   left: 22%;
-}
-.email{
-  position: absolute;
-  z-index: 12;
-  top: 65vh;
-  animation: showForm 3s;
-  animation-fill-mode: forwards;
-  border: none;
-  width: 100%;
-  left: 41%;
 }
 input{
   margin-left: 1%;
   border-radius: 2rem;
-  border: 1px solid #3475d1;
+  border: 1px solid white;
+  outline: none;
   background:rgba(0, 0, 0,0.3);
   color: white;
   padding: 1rem;
   width:16%;
 }
 
-#lname{
-  color: red;
-  font-weight: bold;
-  margin-top: -1.5%;
-  margin-left: 5%;
-  font-size: 1.2rem;
+input:focus{
+  border: 1px solid #3475d1;
+  transition: all 0.2s ease-in;
+  outline: none;
 }
-#lmail{
-  color: red;
-  font-weight: bold;
-  margin-top: -1.5%;
-  margin-left: 5%;
-  font-size: 1.2rem;
-}
-
-input:required:invalid{
-  border-color: red;
-  outline: none
+.wrong-input{
+  border: 1px dashed red;
 }
 button {
   position: absolute;
