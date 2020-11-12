@@ -3,8 +3,8 @@
     <div class="input-fields">
       <input type="text" :class="{'wrong-input': !valid}" id="name" v-model="name"  placeholder="Name*">
       <input type="text" :class="{'wrong-input': !valid}" id="email" v-model="email" placeholder="E-mail*">
-    </div>
       <button v-on:click="submitInfo()">How to build my business presence</button>
+    </div>
   </div>
 </template>
 
@@ -86,26 +86,35 @@ input:focus{
   border: 1px dashed red;
 }
 button {
-  position: absolute;
   margin-left: 1%;
   font-size: 1rem;
-  animation: showForm 3s;
-  animation-fill-mode: forwards;
   background: #3475d1;
-  left: 60%;
   border-radius: 2rem;
-  z-index: 12;
   border: none;
   color: white;
   font-weight: bold;
   cursor: pointer;
   padding: 1.1rem;
-  top: 65vh;
 }
 button:hover{
   background: transparent;
   border: 2px solid #3475d1;
   color: #3475d1;
   transition: all 0.4s ease-in;
+}
+@media(max-width: 768px){
+  .input-fields{
+    top: 50vh;
+    left: 15%;
+  }
+  input{
+    width:65%;
+    margin-top: 2rem;
+  }
+  button {
+    width: 70%;
+    cursor: pointer;
+    margin-top: 2rem;
+  }
 }
 </style>

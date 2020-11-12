@@ -46,7 +46,6 @@ export default {
     height: 10vh;
     width: 100%;
     background: #1a1a1a;
-    position: sticky;
     z-index: 1;
   }
   #clogo {
@@ -226,21 +225,19 @@ export default {
   @media(max-width: 768px){
     nav {
       height: 10vh;
+      z-index: 20;
     }
     .btn{
       margin-top: 3%
-    }
-    .action{
-      margin-left: 73%;
     }
   #clogo {
     height: 4vh;
     width: 15vw;
     margin-top: 3.5%;
-    margin-left: 7%;
+    margin-left: 5%;
   }
   .cnav-links{
-    margin-left: 38%;
+    margin-left: 45%;
   }
   .cnav-links li {
     padding-left: 10%;

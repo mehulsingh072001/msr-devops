@@ -95,7 +95,7 @@ export default {
     text-align: center;
   }
   .animated-title {
-    left: 55%;
+    left: 56%;
     top: 35%;
   }
   .animated-title > div {

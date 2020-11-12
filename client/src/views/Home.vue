@@ -140,12 +140,13 @@ img {
     margin-top: 4%;
   }
   #overlay{
-    height: 100vh;
+    height: 100.5vh;
   }
   .action{
     position: absolute;
     top: 2.4%;
     left: 65%;
+    right: 10%;
   }
 }
 @media(max-width: 858px){
