@@ -1,24 +1,27 @@
 <template>
   <main class="container">
     <section class="card">
-      <img src="../../assets/web-hosting.jpg" alt="prime">
+      <img src="../../assets/compilation.png" alt="prime">
       <div>
-        <h2>Key Benifits</h2>
-        <p>Consectetur delectus et possimus debitis odit Dignissimos adipisci quis tempore</p>
-      </div>
-    </section>
-    <section class="card">
-      <img src="../../assets/" alt="prime">
-      <div>
-        <h2>Key Benifits</h2>
-        <p>Consectetur delectus et possimus debitis odit Dignissimos adipisci quis tempore</p>
+        <h2>Flexibility</h2>
+        <p>Our team of skilled developers at MSR, can adapt to your needs very smoothly. Whether it
+        is a WebApp or a Website, we've got you covered.</p>
       </div>
     </section>
     <section class="card">
       <img src="../../assets/shopify.jpg" alt="prime">
       <div>
-        <h2>Key Benifits</h2>
-        <p>Consectetur delectus et possimus debitis odit Dignissimos adipisci quis tempore</p>
+        <h2>Inhouse Softwares</h2>
+        <p>What distincts us from our competition is that we have our own line of softwares which
+        will help our customers, eliminating the middlemen.</p>
+      </div>
+    </section>
+    <section class="card">
+      <img src="../../assets/hosting.png" alt="prime">
+      <div>
+        <h2>Inhouse Hosting </h2>
+        <p>With us you don't have to wander around in the forest named "The Internet". We've got
+        powerful hosting services for your website too!</p>
       </div>
     </section>
   </main>
@@ -38,16 +41,21 @@ export default {
     max-width: 1000px;
     overflow: hidden;
     position: relative;
-    margin-left: 20%; 
-    margin-top: 7%;
+    margin-left: 25%; 
+    margin-top: 3%;
   }
   .card h2 {
+    width: 400%;
     margin-top: 20%;
     font-size: 40px;
     margin-bottom: 3%;
   }
+  p {
+    font-size: 1.15rem;
+  }
   .card {
     display: grid;
+    border-bottom: 1px solid #1a1a1a;
     overflow:none ;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5%;
@@ -57,9 +65,15 @@ export default {
     color: black;
     margin-bottom: 5%;
   }
+  .card:last-child{
+    border: none;
+  }
   .card img {
     height: 350px;
     width: 500px;
+  }
+  .card:nth-child(even) div{
+    margin-left: 13%;
   }
   .card:nth-child(even) img{
     order: 2;

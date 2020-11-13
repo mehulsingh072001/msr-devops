@@ -1,7 +1,6 @@
 <template>
   <div id="stat">
-    <span>We build your Web Presence!!</span>
-    <p>At MSR consultants we reinvent your business.</p>
+    <h1>Why us ?</h1>
   </div>
 </template>
 
@@ -15,20 +14,15 @@ export default {
 #stat {
   position: relative;
   text-align: center;
-  width: 70%;
-  padding-bottom: 2rem;
+  width: 20%;
   margin: auto;
-  margin-top: 3%;
-  border-bottom: 1px solid #1a1a1a;
+  margin-top: 1%;
 }
-span{ 
+h1{ 
   font-weight: bold;
-  font-size: 40px;
-  color: black;
-}
-p {
-  padding-top: 2%;
-  font-size: 1.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid #1a1a1a;
+  font-size: 50px;
   color: black;
 }
 </style>

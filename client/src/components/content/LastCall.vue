@@ -1,8 +1,12 @@
 <template>
   <div class="last">
     <div class="text">
-      <h1>Why us ?</h1>
-      <p></p>
+      <h1>In conclusion</h1>
+      <p>We are all in one solution or everything you will ever need to build your business's
+     web presence and if are reading this then we think you have read almost everything about us. So before you
+      go, get advantage of our limited time period offer and book your free consultancy call to
+      sky rocket
+      your business.</p>
     <CallToAction id="call"/>
     </div>
   </div>
@@ -22,7 +26,7 @@ export default {
   .last{
     background: #1a1a1a;
     color: #dddddd;
-    height: 600px;
+    height: 400px;
     width: 100%;
   }
   .text{
@@ -32,25 +36,25 @@ export default {
     position: static;
   }
   h1 {
-    font-size: 70px;
+    font-size: 60px;
     text-align: center;
     padding: 1%;
-    margin-left: 40%;
-    border-bottom: 1px dashed #dddddd;
-    max-width: 20%;
+    margin-left: 34%;
+    border-bottom: 1px solid #dddddd;
+    max-width: 30%;
   }
   p {
     margin-top: 2%;
     position: static;
     font-size: 25px;
-    width: 70%;
-    margin-left: 15%;
+    width: 75%;
+    margin-left: 13.5%;
 
   }
   #call{
       position: relative;
       margin-top: 2%;
-      margin-right:10%;
+      margin-right:0%;
       height: 90px;
   }
   .btn{
