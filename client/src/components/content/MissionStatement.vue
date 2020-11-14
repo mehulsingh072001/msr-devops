@@ -25,4 +25,9 @@ h1{
   font-size: 50px;
   color: black;
 }
+@media(max-width: 768px){
+  #stat{
+    width:40%
+  }
+}
 </style>

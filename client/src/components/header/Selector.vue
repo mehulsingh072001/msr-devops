@@ -31,6 +31,7 @@ export default {
     overflow: hidden; 
     margin-left: 36%;
     padding-right: 1px;
+    color: black;
     height: 10vh;    
     width: 240px;
     font-size: 2rem;

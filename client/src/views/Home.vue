@@ -100,7 +100,7 @@ export default {
   }
   .action{
     position: absolute;
-    top: 55%;
+    top: 60%;
     bottom: 10%;
     left: 47%;
     right: 5%;
@@ -139,10 +139,9 @@ img {
     height: 100.5vh;
   }
   .action{
-    position: absolute;
-    top: 2.4%;
-    left: 65%;
-    right: 10%;
+    top: 55%;
+    left: 40%;
+    right: 7%;
   }
 }
 @media(max-width: 858px){

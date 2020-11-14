@@ -1,6 +1,11 @@
 <template>
   <div id="footer" class="footer ">
     <SocialIcons/>
+       <ul class="foot-links">
+          <li><router-link to="/"><i class="fa fa-fw fa-home"></i> Home</router-link></li>
+          <li><router-link to="/about">About</router-link></li>
+          <li><router-link to="/blog"><i class="fas fa-blog"></i> Blog</router-link></li>
+       </ul>
     <p id="copy">MSR DevOps, Copyright &copy; 2020</p>
   </div>
 </template>
@@ -19,24 +24,41 @@ export default {
   #copy {
     color: white;
     font-size: 18px;
+    margin-left: 80%;
+    margin-top: 1%;
   }
   .footer {
     background: #1a1a1a;
     border-top: 3px solid #3475d1;
     width: 100%;
+    height: 15vh;
     overflow: hidden;
   }
-  .v-line{
-    border-left: 1px solid #dddddd;
-    margin-left: 30%;
-    margin-top: 5%;
-    height: 30vh
+  .foot-links{
+    margin-left: 73%;
+    margin-top: -7%;
   }
-  .v-line2{
-    border-left: 1px solid #dddddd;
-    margin-top: 5%;
-    height: 30vh;
-    margin-left: -40%
+  .foot-links li {
+    padding-left: 10%;
+    margin-top: 30px;
+    list-style: none;
+    overflow: hidden;
+    display: inline-block;
+    font-size: 24px;
+  }
+  .foot-links li a {
+      color: white;
+      text-decoration: none;
+      overflow: hidden;
+  }
+  .foot-links li a:hover {
+    border-bottom: 1px solid #3475d1;
+    font-weight: bold;
+  }
+  .foot-links li a.router-link-exact-active {
+    color: #3475d1;
+    text-decoration: none;
+    font-weight: bolder;
   }
   .services {
     width: 80%;

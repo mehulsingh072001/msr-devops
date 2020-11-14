@@ -19,9 +19,6 @@ export default {
     isOpen: false
   }),
   mounted(){
-    window.onclick = this.isOpen
-  },
-  computed:{
   },
   methods: {
     PopOpen() {
@@ -143,18 +140,18 @@ export default {
     animation: animateClose 0.8s;
   }
   @media(max-width: 768px) {
-  .btn{
-    font-size: 22px;
-    font-weight: bold;
-    padding: 12px 30px;
-    overflow: hidden;
-    cursor: pointer;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 15px;
-    border: none;
-    background: #3475d1;
-  }
+    .btn{
+      font-size: 22px;
+      font-weight: bold;
+      padding: 12px 30px;
+      overflow: hidden;
+      cursor: pointer;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 15px;
+      border: none;
+      background: #3475d1;
+    }
   }
 </style>

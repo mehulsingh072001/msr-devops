@@ -1,12 +1,12 @@
 <template>
   <div class=".container grid-2">
-  <h3 class="message">Contact Us</h3>
+  <h3 class="message">Connect with us.</h3>
   <ul>
     <li><a href="https://www.facebook.com/martydevelopment/" target="_blank">
         <i class="fab fa-facebook" tabindex="0"></i>
       </a></li>
     <li><a href="https://codepen.io/Marty-Development" target="_blank">
-        <i class="fab fa-codepen" tabindex="0"></i>
+        <i class="fab fa-twitter" tabindex="0"></i>
       </a></li>
     <li><a href="https://www.instagram.com/marty.development/" target="_blank">
         <i class="fab fa-instagram" tabindex="0"></i>
@@ -18,7 +18,7 @@
         <i class="fab fa-youtube" tabindex="0" target="_blank"></i>
       </a></li>
     <li><a href="#">
-        <i class="fab fa-pinterest" tabindex="0" target="_blank"></i>
+        <i class="fab fa-reddit" tabindex="0" target="_blank"></i>
       </a></li>
   </ul>
 </div>
@@ -38,7 +38,8 @@ export default {
 }
 .message{
   margin-top: 1%;
-  margin-left: 50%;
+  margin-left: 3%;
+  font-size: 1.8rem;
   color: #eee;
 }
 a{
@@ -52,18 +53,19 @@ ul{
   justify-content: center;
   flex-wrap: wrap;
   list-style-type: none;
-  font-size: 2rem;
+  margin-right: 78%;
   overflow: hidden;
 }
 ul li {
-  padding: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
 }
 .fab {
-  font-size: 3rem;
+  font-size: 2.2rem;
 }
 /* transition for social icon hover animation */
 .fa-facebook,
-.fa-codepen,
+.fa-reddit,
 .fa-youtube,
 .fa-instagram,
 .fa-github,
@@ -82,6 +84,12 @@ ul li {
   color: #1da1f2;
   transform: scale(1.1);
 }
+.fa-reddit:hover,
+.fa-reddit:focus{
+  color: #ff4500;
+  transform: scale(1.1);
+}
+
 .fa-youtube:hover,
 .fa-youtube:focus {
   color: #df2426;
@@ -96,20 +104,6 @@ ul li {
 .fa-github:focus {
   color: #000;
   transform: scale(1.1);
-}
-.fa-github:hover,
-.fa-github:focus {
-  color: #000;
-  transform: scale(1.1);
-}
-.fa-codepen:hover,
-.fa-codepen:focus {
-  color: #000;
-  transform: scale(1.1);
-}
-.fa-pinterest:hover,
-.fa-pinterest:focus {
-  color: #b3001b;
 }
 @media(max-width: 1440px){
     .social {

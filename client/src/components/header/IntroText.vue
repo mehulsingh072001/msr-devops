@@ -97,7 +97,6 @@ export default {
   }
   .animated-title {
     left: 56%;
-    top: 35%;
   }
   .animated-title > div {
     left: -1%;

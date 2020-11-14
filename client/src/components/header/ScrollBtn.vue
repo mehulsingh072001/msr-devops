@@ -41,4 +41,11 @@ export default {
     top: 96vh;
     right: 44%;
   }
+  @media(max-width: 768px){
+    button{
+      top: 85vh;
+      right: 46%;
+      z-index: 140;
+    }
+  }
 </style>

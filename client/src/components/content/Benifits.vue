@@ -81,16 +81,31 @@ export default {
   /* Ipad */
   @media(max-width: 768px){
     .container{
-      max-width: 96%;
-      margin-left:  2%;
+      margin-top: 0%;
+      max-width: 85%;
+      margin-left:  7%;
     }
     .card{
       height: 100%;
+      display: block;
+      text-align: center;
+      width:100%;
       margin-bottom: 10%;
     }
-    .card img{
-      height: 250px;
-      width: 400px
+    .card img {
+      height: 350px;
+      width: 650px;
+    }
+    .card h2 {
+      width: 100%;
+      margin-top: 0%;
+      font-size: 40px;
+    }
+    .card p{
+      margin-bottom: 2%;
+    }
+    .card:nth-child(even) img{
+      order: 0;
     }
   }
 </style>

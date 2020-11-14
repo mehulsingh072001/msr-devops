@@ -62,9 +62,22 @@ export default {
   }
   @media(max-width: 768px) {
     #call{
-        margin-top: 4%;
-        margin-right:20%;
+        margin-top: 5.5%;
+        margin-right:1%;
         height: 90px;
+    }
+    h1 {
+      font-size: 50px;
+      margin-left: 20%;
+      margin-top: 3%;
+      max-width: 60%;
+    }
+    p {
+      margin-top: 2%;
+      font-size: 22px;
+      width: 96%;
+      margin-left: 1.5%;
+
     }
   }
 </style>
