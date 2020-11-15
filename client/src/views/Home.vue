@@ -90,7 +90,7 @@ export default {
     height: 5vh;
     width: 3vw;
     position: fixed;
-    bottom:0 ;
+    bottom: 0;
     animation: fadeIn 1s;
     left:97% ;
     transition: all 0.5s ease-in-out;
@@ -123,6 +123,30 @@ img {
 }
 @media(max-width: 1024px){
 }
+@media(max-width: 800px){
+  img {
+    height: 100vh;
+  }
+  #llogo {
+    position: absolute;
+    height: 4vh;
+    width: 15vw;
+    z-index: 12;
+    margin-left: 5%;
+    margin-top: 4%;
+  }
+  #overlay{
+    height: 100.5vh;
+  }
+  #stop{
+    display:none ;
+  }
+  .action{
+    top: 55%;
+    left: 40%;
+    right: 7%;
+  }
+}
 @media(max-width: 768px){
   img {
     height: 100vh;
@@ -138,16 +162,28 @@ img {
   #overlay{
     height: 100.5vh;
   }
+  #stop{
+    display:none ;
+  }
   .action{
     top: 55%;
     left: 40%;
     right: 7%;
   }
 }
-@media(max-width: 858px){
-}
 @media(max-width: 414px){
+  .action{
+    top: 60%;
+    left: 32%;
   }
-@media(max-width: 500px){
+  #overlay{
+    height: 100.7vh;
+  }
+}
+@media(max-width: 375px){
+  .action{
+    left: 32.5%;
+    right: 10%;
+  }
 }
 </style>

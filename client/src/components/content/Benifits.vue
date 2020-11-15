@@ -108,4 +108,24 @@ export default {
       order: 0;
     }
   }
+  @media(max-width: 414px){
+    .card img {
+      height: 250px;
+      width: 400px;
+      margin-left: -12%;
+    }
+    .card h2{
+      font-size: 30px;
+    }
+    .card:nth-child(even) div{
+      margin-left: 0%;
+    }
+  }
+  @media(max-width: 375px){
+    .card img{
+      height: 230px;
+      width: 380px;
+      margin-left: -14%;
+    }
+  }
 </style>

@@ -154,4 +154,16 @@ export default {
       background: #3475d1;
     }
   }
+  @media(max-width: 414px){
+    .btn{
+      font-size: 18px;
+      padding: 8px 27px;
+    }
+  }
+  @media(max-width: 375px){
+    .btn{
+      font-size: 15px;
+      padding: 10px 28px;
+    }
+  }
 </style>

@@ -91,8 +91,30 @@ export default {
   top: 0;
   transform: translate(0, -100%);
 }
+@media(max-width: 800px){
+  .animated-title {
+    left: 54%;
+  }
+  .animated-title > div {
+    left: -1%;
+  }
+  .animated-title > div div span {
+    font-size: 3.7rem;
+    max-width: 100%
+  }
+  .animated-title > div.line{
+    max-width: 105%;
+    top: 0;
+    left: -10%;
+  }
+  .animated-title > div.text-bottom {
+    font-size: 1.7rem;
+    left: -12%;
+    max-width:105%;
+  }
+}
 @media(max-width: 768px){
-.animated-title > div.text-bottom div {
+  .animated-title > div.text-bottom div {
     left: 15%;
   }
   .animated-title {
@@ -113,6 +135,35 @@ export default {
     font-size: 1.3rem;
     left: -12%;
     max-width:100%;
+  }
+}
+@media(max-width: 414px){
+  .animated-title > div div span {
+    font-size: 1.9rem;
+  }
+  .animated-title > div {
+    left: 0%;
+  }
+  .animated-title{
+    left:53.4%
+  }
+  .animated-title > div.text-bottom {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .animated-title > div.line{
+    max-width: 110%;
+    top: 0;
+    left: -8%;
+  }
+}
+@media(max-width: 375px){
+  .animated-title > div div span{
+    font-size: 1.7rem;
+  }
+  .animated-title > div.text-bottom{
+    font-size: 0.9rem;
+    max-width:200%;
   }
 }
 </style>

@@ -103,6 +103,23 @@ export default {
       margin-top: 1.8%;
       margin-left: 95%;
     }
+    @media(max-width: 800px){
+      .hamburger{
+        margin-left: 0%;
+        left: 88%;
+        margin-top: 4.5%;
+      }
+      .ham-line{
+        height: 8px;
+        width: 55px;
+        background: white;
+        margin: 5px;
+      }
+      .toggleBtn{
+        left: 86%;
+        bottom: 92%;
+      }
+    }
     @media(max-width: 768px){
       .hamburger{
         margin-left: 0%;
@@ -111,7 +128,24 @@ export default {
       }
       .toggleBtn{
         left: 86%;
-      bottom: 92%;
+        bottom: 92%;
+      }
+    }
+    @media(max-width: 414px){
+      .hamburger{
+        left: 83%;
+      }
+    .ham-line{
+      height: 4px;
+      width: 40px;
+      background: white;
+      margin: 5px;
+    }
+      #hamlinks li{
+        margin-right: 10%;
+      }
+      .toggleBtn{
+        left: 80%;
       }
     }
 </style>

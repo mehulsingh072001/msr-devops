@@ -27,10 +27,10 @@ export default {
     background: #1a1a1a;
     color: #dddddd;
     height: 400px;
+    overflow: hidden;
     width: 100%;
   }
   .text{
-    overflow: hidden;
     width: 100%;
     text-align: center;
     position: static;
@@ -78,6 +78,30 @@ export default {
       width: 96%;
       margin-left: 1.5%;
 
+    }
+  }
+  @media(max-width: 414px){
+    h1{
+      font-size: 35px;
+    }
+    p{
+      font-size: 14px;
+    }
+    .last{
+      height: 250px;
+    }
+    #call{
+        height: 90px;
+        margin-left: 3%;
+        font-size: 1rem;
+    }
+  }
+  @media(max-width: 375px){
+    h1{
+      font-size: 30px;
+    }
+    p{
+      font-size: 13.5px;
     }
   }
 </style>

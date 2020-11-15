@@ -32,8 +32,8 @@ export default {
 
 <style scoped>
 .container {
-  position: absolute;
-  height: 100%;
+  position: relative;
+  height: 10%;
   font-size: 2rem;
 }
 .message{
@@ -159,42 +159,76 @@ ul li {
 
 
 @media(max-width: 768px){
-  .social {
-    margin-left: 1%;
-    max-width: 30%;
-    font-size: 1.6rem;
-  }
   ul{
     margin-left: 1%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1%;
+    width: 1%;
+    display: block;
+    width: 35%;
   }
+
   .message{
-    margin-top: 7%;
-    margin-left: 6%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+    font-size:1.7rem ;
+    width: 50%;
   }
+
+  ul li {
+    display: inline-block;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+
   .fab {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 }
 @media(max-width: 414px){
+  .message{
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-left: 25%;
+  }
   ul{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: -0%;
+    margin-top: 1%;
+    justify-content: center;
+    margin-left: 5%;
+    list-style-type: none;
+    width:100%;
+    margin-left: 15%;
+    overflow: hidden;
   }
   ul li {
-    padding: 0.4rem;
+    padding-right: 1rem;
+    padding-bottom: 0rem;
   }
   .fab {
-    font-size: 2rem;
+    text-align: center ;
   }
+}
+@media(max-width: 375px){
   .message{
+    margin-top: 5%;
+    margin-left: 20%;
+  }
+  ul{
     margin-top: 1%;
-    font-size: 2rem;
-    margin-right: 5%;
-    text-align: center;
+    justify-content: center;
+    margin-left: 5%;
+    list-style-type: none;
+    width:100%;
+    margin-left: 14%;
+    overflow: hidden;
+  }
+  ul li {
+    padding-right: 1rem;
+    padding-bottom: 0rem;
+  }
+  .fab {
+    text-align: center ;
+    font-size:1.4rem ;
   }
 }
 </style>

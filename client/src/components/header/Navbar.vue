@@ -278,8 +278,8 @@ export default {
       position: absolute;
       background:rgba(0, 0, 0,0.9);
       flex-direction: column;
-      clip-path: circle(100px at 90% -10%);
-      -webkit-clip-path: circle(100px at 90% -10%);
+      clip-path: circle(100px at 90% -20%);
+      -webkit-clip-path: circle(100px at 90% -20%);
       transition: all 1s ease-in-out;
     }
     #hamlinks li a{
@@ -287,8 +287,8 @@ export default {
       text-decoration: none;
     }
     #hamlinks.open {
-      clip-path: circle(2000px at 90% -30%);
-      -webkit-clip-path: circle(1000% at 90% -30%);;
+      clip-path: circle(2000px at 90% -10%);
+      -webkit-clip-path: circle(1000% at 90% -10%);;
     }
 
  
@@ -303,5 +303,14 @@ export default {
     nav{
       position: static;
     }
-       }
+ }
+
+ @media(max-width: 414px){
+    .hamburger{
+      z-index: 100;
+      height: 5vh;
+      margin-left: 82%;
+      margin-top: 4.5%;
+    }
+ }
 </style>
