@@ -89,6 +89,30 @@ export default {
   .company-list{
     font-size: 1.2rem;
   }
+
+  @media(max-width: 1440px){
+    .links{
+      font-size: 1.5rem;
+      left: 75%;
+      margin-top: -8%;
+    }
+  }
+  
+  @media(max-width: 800px){
+    .footer{
+      height: 10vh;
+    }
+    .links{
+      font-size: 1.3rem;
+      width: 100%;
+      left: 62%;
+      position: absolute;
+      flex-direction: row;  
+      margin-top: -25%;
+      border: none;
+    }
+  }
+
   @media(max-width: 768px){
     .footer{
       height: 10vh;

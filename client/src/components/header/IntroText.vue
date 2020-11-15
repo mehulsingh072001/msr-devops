@@ -91,6 +91,22 @@ export default {
   top: 0;
   transform: translate(0, -100%);
 }
+
+@media(max-width: 1440px){
+  .animated-title > div {
+    left: 13%;
+  }
+  .animated-title > div.text-bottom {
+    left: 1%;
+    max-width:80%;
+  }
+  .animated-title > div.line{
+    max-width: 75%;
+    top: 0;
+    left: 10%;
+  }
+}
+
 @media(max-width: 800px){
   .animated-title {
     left: 54%;

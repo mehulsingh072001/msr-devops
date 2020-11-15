@@ -60,6 +60,23 @@ export default {
   .btn{
     height:  199vh;
   }
+
+  @media(max-width: 800px){
+    h1 {
+      font-size: 60px;
+      margin-left: 20%;
+      margin-top: 3%;
+      max-width: 60%;
+    }
+    p {
+      margin-top: 2%;
+      font-size: 25px;
+      width: 96%;
+      margin-left: 1.5%;
+
+    }
+  }
+
   @media(max-width: 768px) {
     #call{
         margin-top: 5.5%;

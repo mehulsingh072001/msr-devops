@@ -139,6 +139,7 @@ export default {
   .fade-enter, .fade-leave-to {
     animation: animateClose 0.8s;
   }
+
   @media(max-width: 768px) {
     .btn{
       font-size: 22px;

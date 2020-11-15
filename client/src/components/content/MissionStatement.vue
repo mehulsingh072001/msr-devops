@@ -9,17 +9,29 @@ export default {
 </script>
 
 <style scoped>
+#stat {
+  position: relative;
+  text-align: center;
+  width: 20%;
+  margin: auto;
+  margin-top: 1%;
+}
 h1{ 
   position: relative;
   text-align: center;
+  width: 60%;
   margin: auto;
   margin-top: 1%;
   font-weight: bold;
   padding: 1rem;
-  width: 60%;
   border-bottom: 1px solid #1a1a1a;
-  font-size: 40px;
+  font-size: 50px;
   color: black;
+}
+@media(max-width: 1440px){
+  h1{
+    width: 20%
+  }
 }
 @media(max-width: 768px){
   #stat{
@@ -27,8 +39,8 @@ h1{
   }
 }
 @media(max-width: 414px){
-  #stat{
-    width: 100%
+  h1{
+    font-size: 35px;
   }
 }
 </style>

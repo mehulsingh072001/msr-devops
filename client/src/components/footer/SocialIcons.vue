@@ -2,23 +2,20 @@
   <div class=".container grid-2">
   <h3 class="message">Connect with us.</h3>
   <ul>
-    <li><a href="https://www.facebook.com/martydevelopment/" target="_blank">
+    <li><a href="https://www.facebook.com/mehulsingh.rathore.355" target="_blank">
         <i class="fab fa-facebook" tabindex="0"></i>
-      </a></li>
-    <li><a href="https://codepen.io/Marty-Development" target="_blank">
-        <i class="fab fa-twitter" tabindex="0"></i>
-      </a></li>
-    <li><a href="https://www.instagram.com/marty.development/" target="_blank">
-        <i class="fab fa-instagram" tabindex="0"></i>
       </a></li>
     <li><a href="https://github.com/mehulsingh072001" target="_blank">
         <i class="fab fa-github" tabindex="0"></i>
       </a></li>
-    <li><a href="#">
-        <i class="fab fa-youtube" tabindex="0" target="_blank"></i>
+    <li><a href="https://twitter.com/mehul_msr_devs" target="_blank">
+        <i class="fab fa-twitter" tabindex="0"></i>
       </a></li>
-    <li><a href="#">
-        <i class="fab fa-reddit" tabindex="0" target="_blank"></i>
+    <li><a href="https://www.linkedin.com/in/mehul-singh-rathore-473b221b5/" target="_blank">
+        <i class="fab fa-linkedin" tabindex="0"></i>
+      </a></li>
+    <li><a href="https://www.youtube.com/channel/UCgTdlX6JftjCXtWq_LUYqjg" target="_blank">
+        <i class="fab fa-youtube" tabindex="0"></i>
       </a></li>
   </ul>
 </div>
@@ -53,7 +50,7 @@ ul{
   justify-content: center;
   flex-wrap: wrap;
   list-style-type: none;
-  margin-right: 78%;
+  margin-right: 80.5%;
   overflow: hidden;
 }
 ul li {
@@ -74,19 +71,12 @@ ul li {
   cursor: pointer;
 }
 /* social media icons hover color */
-.fa-facebook:hover,
-.fa-facebook:focus {
+.fa-facebook:hover{
   color: #1877f2;
   transform: scale(1.1);
 }
-.fa-twitter:hover,
-.fa-twitter:focus {
+.fa-twitter:hover {
   color: #1da1f2;
-  transform: scale(1.1);
-}
-.fa-reddit:hover,
-.fa-reddit:focus{
-  color: #ff4500;
   transform: scale(1.1);
 }
 
@@ -95,68 +85,54 @@ ul li {
   color: #df2426;
   transform: scale(1.1);
 }
-.fa-instagram:hover,
-.fa-instagram:focus {
-  color: #bd22a2;
+.fa-linkedin:hover{
+  color: #2867b2;
   transform: scale(1.1);
 }
-.fa-github:hover,
-.fa-github:focus {
-  color: #000;
+.fa-github:hover{
+  color: #6cc644;
   transform: scale(1.1);
 }
 @media(max-width: 1440px){
-    .social {
-      margin-left: 0%;
-    }
     .message{
       margin-top: 2%;
       color: #eee;
-      margin-left: 13%;
+      margin-left: 2%;
     }
     ul{
-      margin-left: -13%;
+      margin-left: 1.5%;
       font-size: 2rem;
       overflow: hidden;
     }
 }
 
-@media(max-width: 1280px){
-  .social {
-    margin-left: 0%;
-  }
-  .message{
-    margin-top: 2%;
-    color: #eee;
-    margin-left: 7.8%;
-  }
-  ul{
-    margin-left: -15%;
-    font-size: 2rem;
-    overflow: hidden;
-  }
-}
-@media(max-width: 800px) {
-  .social {
-    margin-left: 1%;
-    max-width: 30%;
-    font-size: 1.6rem;
-  }
-  ul{
-    margin-left: 1%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1%;
-  }
-  .message{
-    margin-top: 7%;
-    margin-left: 6%;
-  }
-  .fab {
-    font-size: 1.7rem;
-  }
-}
 
+@media(max-width: 800px){
+  ul{
+    margin-left: 1%;
+    width: 1%;
+    display: block;
+    width: 35%;
+  }
+
+  .message{
+    margin-top: 3%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+    font-size:1.9rem ;
+    width: 50%;
+  }
+
+  ul li {
+    display: inline-block;
+    padding-right: 1rem;
+    padding-left: 0.5rem;
+  }
+
+  .fab {
+    font-size: 1.8rem;
+  }
+}
 
 @media(max-width: 768px){
   ul{

@@ -121,7 +121,10 @@ img {
   width: 100%;
   height: 99.5vh;
 }
-@media(max-width: 1024px){
+@media(max-width: 1440px){
+  .action{
+    left: 45%;
+  }
 }
 @media(max-width: 800px){
   img {
