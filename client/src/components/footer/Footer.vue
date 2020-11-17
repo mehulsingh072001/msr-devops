@@ -35,6 +35,7 @@ export default {
   .footer {
     background: #1a1a1a;
     border-top: 3px solid #3475d1;
+    bottom: -100%;
     width: 100%;
     height: 15vh;
     overflow: hidden;

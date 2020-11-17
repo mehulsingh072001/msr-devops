@@ -6,6 +6,7 @@
           <button v-on:click="PopClose" class="closeBtn">&times;</button>
           <div class="modal-content">
              <h1 class="heading">Book Your Appointment !</h1>
+             <ContactForm/>
           </div>
         </div>
     </transition>
@@ -13,8 +14,12 @@
 </template>
 
 <script>
+import ContactForm from './ContactForm.vue'
 export default {
   name: "CallToAction",
+  components:{
+    ContactForm
+  },
   data: () => ({
     isOpen: false
   }),
@@ -107,13 +112,6 @@ export default {
     background:rgba(0, 0, 0,0.9);
   }
 
-  .overlay {
-    width: 100vw;
-    height: 100vh;
-  }
-  p {
-    color: black;
-  }
   /* Modal Content/Box */
   .modal-content {
     background-color: #dddddd;
@@ -154,17 +152,37 @@ export default {
       border: none;
       background: #3475d1;
     }
+    .closeBtn{
+      margin-left: 90%;
+    }
+    .heading{
+      margin-top: 4%;
+      margin-left: 10%;
+      width: 80%;
+    }
   }
   @media(max-width: 414px){
     .btn{
       font-size: 18px;
       padding: 8px 27px;
     }
+    .heading{
+      margin-left: 8%;
+      font-size: 1.2rem;
+      margin-top: 5%;
+      width: 80%;
+    }
+    .closeBtn{
+      margin-left: 85%;
+    }
   }
   @media(max-width: 375px){
     .btn{
       font-size: 15px;
       padding: 10px 28px;
+    }
+    .heading{
+      font-size: 1.1rem;
     }
   }
 </style>

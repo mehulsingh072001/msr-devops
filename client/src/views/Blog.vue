@@ -3,8 +3,8 @@
     <Navbar id="nav"/>
     <Selector/>
     <PostList/>
-  </div>
     <Footer />
+  </div>
 </template>
 
 <script>

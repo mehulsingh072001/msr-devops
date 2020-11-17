@@ -8,12 +8,12 @@
       <img src="../assets/handshake.jpg" alt="handshake">
       <IntroText/>
       <ScrollBtn />
-    </div>
       <Navbar/>
       <button v-if="isVisible" @click="scrollTop" id="stop"><i class="fas fa-angle-up"></i></button>
     <MissionStatement/>
     <Benifits />
     <LastCall />
+    </div>
     <Footer />
   </div>
 </template>

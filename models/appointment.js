@@ -8,6 +8,7 @@ const appointmentSchema = new Schema({
     name: String,
     email: String,
     phone: Number,
+    message: String,
     contact_method: String,
     slots: {
         slot_time: String,
