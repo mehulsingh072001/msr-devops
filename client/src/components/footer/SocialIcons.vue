@@ -164,16 +164,16 @@ ul li {
   .message{
     width: 100%;
     margin-top: 5%;
+    font-size: 1.8rem;
     margin-bottom: 2%;
-    margin-left: 25%;
+    margin-left: 20%;
   }
   ul{
     margin-top: 1%;
     justify-content: center;
-    margin-left: 5%;
+    margin-left: 22%;
     list-style-type: none;
     width:100%;
-    margin-left: 15%;
     overflow: hidden;
   }
   ul li {

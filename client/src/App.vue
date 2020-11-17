@@ -20,10 +20,12 @@ export default {
 html{ 
   font-family: 'Roboto', sans-serif;
   font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
   scroll-behavior: smooth;
   outline: none;
 }
 body{
+  overflow-x: hidden;
   background: #dddddd;
 }
 * {

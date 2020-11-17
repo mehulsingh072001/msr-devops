@@ -40,7 +40,6 @@ export default {
   font-family: 'Montserrat', sans-serif;
     max-width: 1000px;
     overflow: hidden;
-    position: static;
     margin-left: 25%; 
     margin-top: 3%;
   }
@@ -56,7 +55,7 @@ export default {
   .card {
     display: grid;
     border-bottom: 1px solid #1a1a1a;
-    overflow:none ;
+    overflow:hidden ;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 5%;
     background: #dddddd;
@@ -145,9 +144,9 @@ export default {
   }
   @media(max-width: 414px){
     .card img {
-      height: 250px;
-      width: 400px;
-      margin-left: -12%;
+      height: 200px;
+      width: 350px;
+      margin-left: 0%;
     }
     .card h2{
       font-size: 30px;

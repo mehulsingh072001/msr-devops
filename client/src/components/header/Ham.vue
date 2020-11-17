@@ -40,8 +40,8 @@ export default {
     height: 100vh;
     justify-content: space-around;
     align-items: center;
-    margin-left: auto;
     position: absolute;
+    padding: 1rem;
     background:rgba(0, 0, 0,0.9);
     flex-direction: column;
     clip-path: circle(100px at 90% -30%);
@@ -69,13 +69,11 @@ export default {
   }
     #hamlinks li a{
       color: white;
-      border-bottom: 3px solid #3475d1;
       text-decoration: none;
     }
     #hamlinks.open {
-      clip-path: circle(2000px at 90% -10%);
+      clip-path: circle(1000px at 90% -10%);
       overflow: hidden;
-      padding: 1rem;
       -webkit-clip-path: circle(1000% at 90% -10%);;
     }
     #hamlinks li a:hover {

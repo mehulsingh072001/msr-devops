@@ -1,6 +1,6 @@
 <template>
   <div>
-    <footer>
+    <div id="footer" class="footer ">
     <SocialIcons/>
     <div class="line"></div>
       <div class="links">
@@ -9,7 +9,7 @@
         <router-link to="/blog"> Blog</router-link>
       </div>
       <p id="copy">MSR DevOps, Copyright &copy; 2020</p>
-    </footer>
+    </div>
   </div>
 </template>
 
@@ -32,12 +32,9 @@ export default {
     position: static;
     display: none;
   }
-  footer {
+  .footer {
     background: #1a1a1a;
     border-top: 3px solid #3475d1;
-    position:relative ;
-    bottom: 0%;
-    margin: 0;
     width: 100%;
     height: 15vh;
     overflow: hidden;
