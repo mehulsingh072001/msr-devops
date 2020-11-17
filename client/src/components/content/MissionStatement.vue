@@ -33,14 +33,29 @@ h1{
     width: 20%
   }
 }
+@media(max-width: 800px){
+  h1{
+    font-size: 35px;
+    width: 50%
+  }
+}
 @media(max-width: 768px){
   #stat{
     width:40%
   }
 }
 @media(max-width: 414px){
+  #stat{
+    width:90%
+  }
   h1{
     font-size: 35px;
+    width: 50%
+  }
+}
+@media(max-width: 375px){
+  h1{
+    font-size: 30px;
   }
 }
 </style>

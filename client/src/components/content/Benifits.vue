@@ -40,7 +40,7 @@ export default {
   font-family: 'Montserrat', sans-serif;
     max-width: 1000px;
     overflow: hidden;
-    position: relative;
+    position: static;
     margin-left: 25%; 
     margin-top: 3%;
   }

@@ -1,8 +1,10 @@
 <template>
   <div>
     <Navbar id="nav"/>
+    <div class="content">
     <Selector/>
-    <PostList/>
+      <PostList/>
+    </div>
     <Footer />
   </div>
 </template>

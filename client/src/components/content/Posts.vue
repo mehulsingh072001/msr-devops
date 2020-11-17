@@ -1,13 +1,15 @@
 <template>
-  <main v-for="post in allPosts" :key="post.id" class="container">
-    <section class="card">
-        <img class="thumb" v-bind:src="'http://localhost:5000/'+post.image"  alt="thumbnail">
-          <div class="content">
-            <h2>{{post.title}}</h2>
-            <p>{{post.description}}</p>
-          </div>
-    </section>
-  </main>
+  <div>
+    <main v-for="post in allPosts" :key="post.id" class="container">
+      <section class="card">
+          <img class="thumb" v-bind:src="'http://localhost:5000/'+post.image"  alt="thumbnail">
+            <div class="content">
+              <h2>{{post.title}}</h2>
+              <p>{{post.description}}</p>
+            </div>
+      </section>
+    </main>
+  </div>
 </template>
 
 <script>

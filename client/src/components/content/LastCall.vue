@@ -26,9 +26,7 @@ export default {
   .last{
     background: #1a1a1a;
     color: #dddddd;
-    position: relative;
     height: 400px;
-    bottom: 0;
     overflow: hidden;
     width: 100%;
   }
