@@ -70,10 +70,10 @@ export default {
   .cnav-links li a {
       color: white;
       text-decoration: none;
-      overflow: hidden;
+      border-bottom: 1px solid #3475d1;
+
   }
   .cnav-links li a:hover {
-    border-bottom: 1px solid #3475d1;
     font-weight: bold;
   }
   .cnav-links li a.router-link-exact-active {

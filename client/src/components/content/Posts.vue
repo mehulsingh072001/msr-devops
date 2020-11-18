@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1 v-if="isLoading">My Data is being loaded</h1>
     <main v-for="post in allPosts" :key="post.id" class="container">
       <section class="card">
           <img class="thumb" v-bind:src="'https://msr-back.herokuapp.com/'+post.image"  alt="thumbnail">
@@ -15,6 +16,11 @@
 <script>
 import { mapActions, mapGetters } from 'vuex';
 export default {
+  data(){
+    return{
+      isLoading: false
+    }
+  },
   name: 'PostList',
   components: {
   },
@@ -23,7 +29,8 @@ export default {
   },
   computed: mapGetters(['allPosts']),
   created() {
-    this.fetchPosts()
+    this.isLoading = true
+    this.fetchPosts().then(() => this.isLoading = false)
   }
 }
 </script>

@@ -5,7 +5,7 @@ const state = {
 }
 const actions = {
   async addPost({ commit }, title, content, category, image) {
-    const response = await axios.post('http://localhost:5000/api/blog/', {title, content, category, image, completed: false})
+    const response = await axios.post('https://msr-back.herokuapp.com/api/blog/', {title, content, category, image, completed: false})
     commit('newPost', response.data);
   },
 }
