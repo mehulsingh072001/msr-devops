@@ -32,7 +32,7 @@ export default {
             formData.append('description', this.description);
             formData.append('content', this.content);
             formData.append('category', this.category);
-            axios.post( 'https://msr-back.herokuapp.com/api/blog/',
+            axios.post( 'http://localhost:5000/api/blog/',
                 formData,
                 {
                 headers: {

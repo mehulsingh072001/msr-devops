@@ -10,12 +10,12 @@ const getters = {
 
 const actions = {
   async fetchPosts({ commit }) {
-    const response = await axios.get('https://msr-back.herokuapp.com/api/blog/');
+    const response = await axios.get('http://localhost:5000/api/blog');
     commit('setPosts', response.data);
   },
   async fetchCats({ commit }, e) {
     const category = e.target.options[e.target.options.selectedIndex].innerText;
-    const response = await axios.get(`https://msr-back.herokuapp.com/api/blog/${category}`);
+    const response = await axios.get(`http://localhost:5000/api/blog/${category}`);
     commit('setPosts', response.data);
   }
 }

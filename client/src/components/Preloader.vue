@@ -1,39 +1,29 @@
 <template>
 	<transition name="fade">
-		<div v-if="show" class="preloader">
-			<div class="logo"></div>
-			<p>Добро пожаловать!</p>
-			<div class="circles">
-				<div class="circle"></div>
-				<div class="circle"></div>
-				<div class="circle"></div>
-				<div class="circle"></div>
-				<div class="circle"></div>
-			</div>
-		</div>
+		<div class="loader"></div>
 	</transition>
 </template>
 
 <script>
 export default {
-  name: 'preloader',
-	data(){
-		return {
-			show: true
-		}
-	},
-	mounted(){
-		if(this.show) this.showToggle()
-	},
-	methods: {
-		showToggle(){
-			setTimeout(() => {
-				this.show = false
-			}, 700)
-		}
-	}
+  name: 'Preloader',
 }
 </script>
 
 <style scoped>
+.loader{
+	border: 10px solid #f3f3f3;
+	border-top: 10px solid #3475d1;
+	margin-bottom: 25.5%;
+	border-radius: 50%;
+	margin-left: 50%;
+	width: 120px;
+	height: 120px;
+	animation: spin 2s linear infinite;
+}
+
+@keyframes spin{
+	0%{ transform: rotate(0deg);}
+	100%{ transform: rotate(360deg);}
+}
 </style>

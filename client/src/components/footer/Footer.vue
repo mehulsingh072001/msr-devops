@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="footer" class="footer ">
+    <div  class="footer ">
     <SocialIcons/>
     <div class="line"></div>
       <div class="links">

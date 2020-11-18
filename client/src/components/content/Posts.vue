@@ -1,9 +1,10 @@
 <template>
   <div>
-    <h1 v-if="isLoading">My Data is being loaded</h1>
+    <Preloader v-if="isLoading"/>
+    <h1 v-if="error">There is an error</h1>
     <main v-for="post in allPosts" :key="post.id" class="container">
       <section class="card">
-          <img class="thumb" v-bind:src="'https://msr-back.herokuapp.com/'+post.image"  alt="thumbnail">
+          <img class="thumb" v-bind:src="'http://localhost:5000/'+post.image"  alt="thumbnail">
             <div class="content">
               <h2>{{post.title}}</h2>
               <p>{{post.description}}</p>
@@ -15,14 +16,17 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
+import Preloader from '../Preloader.vue'
 export default {
   data(){
     return{
-      isLoading: false
+      isLoading: false,
+      error: false
     }
   },
   name: 'PostList',
   components: {
+    Preloader
   },
   methods: {
     ...mapActions(['fetchPosts'])
@@ -30,7 +34,7 @@ export default {
   computed: mapGetters(['allPosts']),
   created() {
     this.isLoading = true
-    this.fetchPosts().then(() => this.isLoading = false)
+    this.fetchPosts().then(() => this.isLoading = false).catch(() => this.error = true)
   }
 }
 </script>
