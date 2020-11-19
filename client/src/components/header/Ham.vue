@@ -72,9 +72,9 @@ export default {
       text-decoration: none;
     }
     #hamlinks.open {
-      clip-path: circle(1000px at 90% -10%);
+      clip-path: circle(2000px at 90% -10%);
       overflow: hidden;
-      -webkit-clip-path: circle(1000% at 90% -10%);;
+      -webkit-clip-path: circle(1000px at 90% -10%);;
     }
     #hamlinks li a:hover {
       border-bottom: 3px solid #3475d1;
@@ -145,5 +145,10 @@ export default {
       .toggleBtn{
         left: 80%;
       }
+    #hamlinks.open {
+      clip-path: circle(800px at 90% -10%);
+      overflow: hidden;
+      -webkit-clip-path: circle(1000px at 90% -10%);;
+    }
     }
 </style>

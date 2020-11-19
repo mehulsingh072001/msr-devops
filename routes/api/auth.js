@@ -25,33 +25,23 @@ router.post('/register', async(req, res) => {
         email: req.body.email,
         password: hashedPassword
     });
-    try{
-        const savedUser = await user.save();
-        res.send({user: user._id});
-    }catch(err) {
-        res.status(400).send(err);
-    }
+    await user.save().then(User => res.json(User))
 });
 
 //Login
-router.post('/login', async (req, res) => {
-    // Validate data before login
+router.post('/login', async (req, res, ) => {
     const { error } = loginValidation(req.body);
     if(error) return res.status(400).send(error.details[0].message);
 
-    // Checking if email exist
-    const emailExist = await User.findOne({email: req.body.email});
-    if (emailExist) return res.status(400).send('Email already exists')
-
-    const emailNoExist = await User.findOne({email: null});
-    if (emailNoExist) return res.status(400).send('Email No exists')
+    const user = await User.findOne({email: req.body.email});
+    if (!user) return res.status(400).send('Email No exists')
 
     // Password is correct?
     const validPass = await bcrypt.compare(req.body.password, user.password);
-    res.header('auth-token', token).send(token);
+    if(!validPass) return res.status(400).send('Invalid Password')
 
-
-
+    //create and assign a token
+    const token = jwt.sign({_id: user._id}, process.env.TOKEN_SECRET);
+    res.header('auth-token', token).send('Logged in')
 })
-router.post('/login')
 module.exports = router

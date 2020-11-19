@@ -3,6 +3,7 @@ const router = express.Router();
 const multer = require('multer');
 var fs = require('fs');
 const path = require('path')
+const verify = require('../../models/verifyToken')
 
 // Posts Model
 const Post = require('../../models/posts');
@@ -56,7 +57,7 @@ router.get('/pc', (req, res) => {
 // @ route Post api/blog
 // @ desc  Post All Items
 // @ access Public
-router.post('/', upload, (req, res) => {
+router.post('/', verify, upload, (req, res) => {
     const newPost = new Post({
         title: req.body.title,
         description: req.body.description,

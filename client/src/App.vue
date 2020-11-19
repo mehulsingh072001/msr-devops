@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <router-view ></router-view>
+    <transition name="fade" mode="out-in">
+      <router-view ></router-view>
+    </transition>
   </div>
 </template>
 
@@ -33,4 +35,19 @@ body{
   margin: 0;
   padding: 0;
 }
+  @keyframes animateOpen{
+    from{left: -300px; opacity: 0;}
+    to{left: 0; opacity: 1;}
+  } 
+  @keyframes animateClose{
+    from{left: 0; opacity: 1;}
+    to{left: -300px; opacity: 0;}
+  } 
+ .fade-enter-active, .fade-leave-active {
+    animation: animateOpen 0.5s;
+  }
+  .fade-enter, .fade-leave-to {
+    animation: animateClose 0.8s;
+  }
+
 </style>
