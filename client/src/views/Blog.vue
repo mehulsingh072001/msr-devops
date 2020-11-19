@@ -28,9 +28,4 @@ export default {
 </script>
 
 <style scoped>
-  .container{
-    position: absolute;
-    bottom: 0%;
-    width:100% ;
-  }
 </style>

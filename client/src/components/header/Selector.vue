@@ -16,10 +16,19 @@
 import { mapActions, mapGetters } from 'vuex';
 export default {
   name: 'Selector',
+  data(){
+    return{
+      isLoading: false
+    }
+  },
+  components:{
+  },
   methods: {
     ...mapActions(['fetchCats'])
   },
   computed: mapGetters(['allPosts']),
+  created(){
+  }
 }
 </script>
 
@@ -64,14 +73,14 @@ select {
 
 label {position:relative}
 label:after {
-    content:'';
+  content:'<>';
    font:1.2rem "Consolas", monospace;
     color:black;
     -webkit-transform:rotate(90deg);
     -moz-transform:rotate(90deg);
     -ms-transform:rotate(90deg);
     transform:rotate(90deg);
-    right:0.1rem; top:12px;
+    right:0rem; top:12px;
     position:absolute;
 }
 label:before {
