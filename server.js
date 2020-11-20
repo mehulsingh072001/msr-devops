@@ -1,6 +1,4 @@
 const express = require('express');
-var text = require('textbelt')
-const schedule = require('node-schedule')
 const mongoose = require('mongoose');
 const path = require('path')
 const bodyParser = require('body-parser');

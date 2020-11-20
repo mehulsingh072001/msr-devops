@@ -1,6 +1,18 @@
-import { createApp } from 'vue'
+import Vue from 'vue'
 import App from './App.vue'
-import store from './store';
 import router from './router'
+import store from './store'
+import Axios from 'axios'
 
-createApp(App).use(router).use(store).mount('#app')
+Vue.config.productionTip = false
+Vue.prototype.$http = Axios;
+const token = localStorage.getItem('token')
+if(token) {
+  Vue.prototype.$http.defaults.headers.common['Authorization']
+}
+
+new Vue({
+  router,
+  store,
+  render: h => h(App)
+}).$mount('#app')
