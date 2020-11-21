@@ -5,7 +5,7 @@
       <router-link to="/"><img id="llogo" src="../assets/logo.png" alt="logo"></router-link>
       <Ham/>
       <div id="overlay"></div>
-      <img src="../assets/handshake.jpg" alt="handshake">
+      <img src="../assets/handshake-min.jpg" alt="handshake">
       <IntroText/>
       <ScrollBtn />
       <Navbar/>
