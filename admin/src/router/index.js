@@ -11,13 +11,13 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'login',
+    component: Login,
   },
   {
-    path: '/login',
-    name: 'login',
-    component: Login
+    path: '/dashboard',
+    name: 'dashboard',
+    jomponent: Home,
   },
   {
     path: '/secure',
@@ -30,29 +30,43 @@ const routes = [
   {
     path: '/register',
     name: 'register',
-    component: Register
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: Register,
   }
 ]
 
 const router = new VueRouter({
+  mode: "history",
+  base: process.env.BASE_URL,
   routes
 })
 
 router.beforeEach((to, from, next) => {
-  if(to.matched.some(record => record.meta.requiresAuth)){
-    if(store.getters.isLoggedIn){
-      next()
-      return
+    if (to.matched.some(record => record.meta.requiresAuth)) {
+      // this route requires auth, check if logged in
+      // if not, redirect to login page.
+      if (!store.getters.isLoggedIn) {
+        next({
+            name: 'login'
+        })
+      } else {
+        next()
+      }
     }
-    next('/login')
-  }else{
-    next()
-  }
+    if (to.matched.some(record => record.meta.requiresAdmin)) {
+      // this route requires auth, check if logged in
+      // if not, redirect to home page.
+      if (store.getters.isLoggedIn) {
+        next({
+            name: 'dashboard'
+        })
+      } else {
+        next()
+      }
+    }  
+     else {
+      next() // make sure to always call next()!
+    }
 })
+
 
 export default router

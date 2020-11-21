@@ -1,5 +1,5 @@
 <template>
- <div>
+ <div v-if="!isLoggedIn">
    <form class="login" @submit.prevent="login">
      <h1>Sign in</h1>
      <label>Email</label>
@@ -20,12 +20,15 @@ export default {
       password: ""
     }
   },
+  computed: {
+    isLoggedIn: function(){ return this.$store.getters.isLoggedIn}
+  },
   methods: {
     login: function(){
       let email = this.email
       let password = this.password
       this.$store.dispatch('login', { email, password})
-      .then(() => this.$router.push('/'))
+      .then(() => {this.$router.go({name: 'dashboard'})})
       .catch(err => console.log(err))
     }
   }

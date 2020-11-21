@@ -18,6 +18,7 @@ const actions = {
         const token = resp.data.token
         const user = resp.data.user
         localStorage.setItem('token', token)
+        console.log(resp)
         commit('auth_success', token, user)
         resolve(resp)
       })
