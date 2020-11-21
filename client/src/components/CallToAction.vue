@@ -68,6 +68,7 @@ export default {
     padding: 12px 30px;
     overflow: hidden;
     cursor: pointer;
+    margin-bottom: 20%;
     color: white;
     text-decoration: none;
     text-align: center;

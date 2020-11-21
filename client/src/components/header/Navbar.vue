@@ -8,14 +8,14 @@
           <div class="ham-line"></div>
        </div>
       <ul id="hamlinks" :class="{'open': isOpen}">
-          <li> <router-link to="/"><i class="fa fa-fw fa-home"></i> Home</router-link></li>
-          <li><router-link to="/about"><i class="fa fa-fw fa-wrench"></i> About</router-link></li>
-          <li><router-link to="/blog"><i class="fas fa-blog"></i> Blog</router-link></li>
+ <!--       <li> <router-link to="/"><i class="fa fa-fw fa-home"></i> Home</router-link></li>
+          <li><router-link to="/about"><i class="fa fa-fw fa-wrench"></i> About</router-link></li>-->
+          <li><router-link to="/"><i class="fas fa-blog"></i> Blog</router-link></li>
        </ul>
        <ul class="cnav-links">
-          <li><router-link to="/"><i class="fa fa-fw fa-home"></i> Home</router-link></li>
-          <li><router-link to="/about">About</router-link></li>
-          <li><router-link to="/blog"><i class="fas fa-blog"></i> Blog</router-link></li>
+         <!--          <li><router-link to="/"><i class="fa fa-fw fa-home"></i> Home</router-link></li>
+         <li><router-link to="/about">About</router-link></li>-->
+          <li><router-link to="/"><i class="fas fa-blog"></i> Blog</router-link></li>
        </ul>
     </nav>
   </div>
@@ -57,7 +57,7 @@ export default {
     margin-left: 5%;
   }
   .cnav-links{
-    margin-left: 55%;
+    margin-left: 90%;
   }
   .cnav-links li {
     padding-left: 20%;
