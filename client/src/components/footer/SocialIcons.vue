@@ -80,8 +80,7 @@ ul li {
   transform: scale(1.1);
 }
 
-.fa-youtube:hover,
-.fa-youtube:focus {
+.fa-youtube:hover{
   color: #df2426;
   transform: scale(1.1);
 }

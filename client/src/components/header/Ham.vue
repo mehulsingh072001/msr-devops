@@ -47,6 +47,7 @@ export default {
     clip-path: circle(100px at 90% -30%);
     -webkit-clip-path: circle(100px at 90% -30%);
     transition: all 0.4s ease-in;
+    -webkit-transition: all 0.4s ease-in;
   }
 
   .toggleBtn{
@@ -146,7 +147,7 @@ export default {
         left: 80%;
       }
     #hamlinks.open {
-      clip-path: circle(800px at 90% -10%);
+      clip-path: circle(1000px at 90% -10%);
       overflow: hidden;
       -webkit-clip-path: circle(1000px at 90% -10%);;
     }
