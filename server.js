@@ -36,5 +36,6 @@ app.use('/api/info', headInfoRoute)
 app.use('/api/', appointmentCreateRoute)
 
 
-app.listen(5000, '192.168.43.227')
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.log(`server started on port ${port}`))
 
