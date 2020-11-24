@@ -10,7 +10,7 @@ const getters = {
 
 const actions = {
   async fetchPosts({ commit }) {
-    const response = await axios.get('http://192.168.43.227:5000/api/blog');
+    const response = await axios.get('http://192.168.43.161/api/blog');
     commit('setPosts', response.data);
   },
   async fetchCats({ commit }, e) {
