@@ -10,12 +10,18 @@ const getters = {
   authStatus: state => state.status
 }
 const actions = {
+  async addPost({ commit }, title, content, category, image) {
+    const token = localStorage.getItem('token')
+    const response = await axios.post('http://localhost:5000/api/blog/',  {headers: { "auth-token": token}}, {title, content, category, image, completed: false})
+    commit('newPost',  response.data);
+  },
   login({commit}, user){
     return new Promise((resolve, reject) => {
       commit('auth_request')
-      axios({url: 'http://localhost:5000/api/user/login', data: user, method: 'POST'})
+      axios({url: 'http://192.168.43.161/api/user/login', data: user, method: 'POST'})
       .then(resp => {
-        const token = resp.data.token
+        const token = resp.data
+        console.log(`this is ${token}`)
         const user = resp.data.user
         localStorage.setItem('token', token)
         console.log(resp)
@@ -33,7 +39,7 @@ const actions = {
   register({commit}, user){
     return new Promise((resolve, reject) => {
       commit('auth_request')
-      axios({url: 'http://localhost:5000/api/user/register', data: user, method: 'POST' })
+      axios({url: 'http://192.168.43.161/api/user/register', data: user, method: 'POST' })
       .then(resp => {
         const token = resp.data.token
         const user = resp.data.user
@@ -74,6 +80,10 @@ const mutations = {
   logout(state){
     state.status = ''
     state.token = ''
+  },
+  addPost: (state, token, post) => {
+    state.posts.unshift(post) 
+    state.token = token
   }
 }
 

@@ -17,7 +17,10 @@ const routes = [
   {
     path: '/dashboard',
     name: 'dashboard',
-    jomponent: Home,
+    component: Home,
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: '/secure',

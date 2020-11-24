@@ -9,15 +9,12 @@ const PostSchema = new Schema({
     },
     title: {
         type: String,
-        required: true
     },
     description: {
         type: String,
-        required: true
     },
     content: {
         type: String,
-        required: true
     },
     date: {
         type: Date,
@@ -25,7 +22,6 @@ const PostSchema = new Schema({
     },
     category: {
         type: String,
-        required: true
     },
 });
 
