@@ -2,8 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Login from '../components/Login.vue'
-import Secure from '../components/Secure.vue'
-import Register from '../components/Register.vue'
+import Analytics from '../views/Analytics.vue'
+import Customers from '../views/Customers.vue'
+import Blog from '../views/Blog.vue'
 import store from '../store/index'
 
 Vue.use(VueRouter)
@@ -23,18 +24,29 @@ const routes = [
     }
   },
   {
-    path: '/secure',
-    name: 'secure',
-    component: Secure,
+    path: '/customers',
+    name: 'customers',
+    component: Customers,
     meta: {
       requiresAuth: true
     }
   },
   {
-    path: '/register',
-    name: 'register',
-    component: Register,
-  }
+    path: '/blog',
+    name: 'blog',
+    component: Blog,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: '/analytics',
+    name: 'analytics',
+    component: Analytics,
+    meta: {
+      requiresAuth: true
+    }
+  },
 ]
 
 const router = new VueRouter({
