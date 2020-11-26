@@ -21,10 +21,10 @@ const actions = {
       axios({url: 'http://192.168.43.161/api/user/login', data: user, method: 'POST'})
       .then(resp => {
         const token = resp.data
-        console.log(`this is ${token}`)
+//        console.log(`this is ${token}`)
         const user = resp.data.user
         localStorage.setItem('token', token)
-        console.log(resp)
+        console.log('Logged In')
         commit('auth_success', token, user)
         resolve(resp)
       })

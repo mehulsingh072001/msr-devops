@@ -1,20 +1,18 @@
 <template>
-  <div v-if="isLoggedIn" class="home">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div class="home">
+        <h1>This is Dashboard</h1>
+    </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  computed: {
-    isLoggedIn: function(){ return this.$store.getters.isLoggedIn}
-  },
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+    name: 'Home'
 }
 </script>
+
+<style scoped>
+    .home{
+        margin-left: 50%;
+        position: absolute;
+    }
+</style>
