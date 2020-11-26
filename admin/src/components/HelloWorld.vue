@@ -3,7 +3,7 @@
       <input type="file" id="file" ref="file" v-on:change="handleFileUpload()"/>
       <input type="text" v-model="title" placeholder="Add title"/>
       <input type="text" v-model="description" placeholder="Add description"/>
-      <input type="text" v-model="content" placeholder="Add content"/>
+      <textarea type="text" v-model="content" placeholder="Add content"/>
       <input type="text" v-model="category" placeholder="Add category"/>
       <button v-on:click="submitFile()">Submit</button>
   </div>
@@ -13,6 +13,8 @@
 import axios from 'axios'
 export default {
   name: 'FileUpload',
+  components: {
+  },
   data(){ return {
      file: '',
      title: '',
