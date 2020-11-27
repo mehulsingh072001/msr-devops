@@ -1,6 +1,20 @@
 <template>
-    <div class="nav">
-      <ul>
+  <div>
+      <span v-on:click="toggle"> close<img id="clogo"  src="../assets/logo.png" alt="logo"></span>
+  <div class="nav" :class="{'close': !isOpen}">
+     <!--<div class="hamburger" v-on:click="toggle">
+        <div class="ham-line"></div>
+        <div class="ham-line"></div>
+        <div class="ham-line"></div>
+     </div>-->
+     <ul v-if="isOpen = false">
+        <li ><router-link class="home" to="/home"><i class="fas fa-home"></i> </router-link></li>
+        <li ><router-link class="customers" to="/customers"><i class="fas fa-user-friends"></i> </router-link></li>
+        <li ><router-link class="analytics" to="/analytics"><i class="fas fa-chart-line"></i> </router-link></li>
+        <li ><router-link class="blog" to="/blog"><i class="fas fa-blog"></i> </router-link></li>
+        <li ><a class="logout" v-if="isLoggedIn" @click="logout"><i class="fas fa-sign-out-alt"></i> </a></li>
+      </ul>
+     <ul v-if="isOpen = true">
         <li ><router-link class="home" to="/home"><i class="fas fa-home"></i> Home</router-link></li>
         <li ><router-link class="customers" to="/customers"><i class="fas fa-user-friends"></i> Customers</router-link></li>
         <li ><router-link class="analytics" to="/analytics"><i class="fas fa-chart-line"></i> Analytics</router-link></li>
@@ -8,10 +22,14 @@
         <li ><a class="logout" v-if="isLoggedIn" @click="logout"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
       </ul>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
+  data: () => ({
+    isOpen: true
+  }),
   computed: {
     isLoggedIn: function(){ return this.$store.getters.isLoggedIn}
   },
@@ -21,6 +39,9 @@ export default {
       .then(() => {
         this.$router.push('/')
       })
+    },
+    toggle() {
+      this.isOpen = !this.isOpen
     }
   },
   name: 'Navbar'
@@ -36,7 +57,25 @@ export default {
   height: 100vh;
 }
 
-
+.hamburger{
+  margin-top: 13%;
+  margin-left: 5%;
+}
+.ham-line{
+  height: 4px;
+  width: 35px;
+  background: white;
+  margin: 5px;
+}
+#clogo {
+  display: flex;
+  float: left;
+  height: 4vh;
+  width: 6vw;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  margin-left: 28%;
+}
 .nav ul li{
   list-style: none;
   margin-top: 40%;
