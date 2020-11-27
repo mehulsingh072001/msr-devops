@@ -29,7 +29,7 @@
 <script>
 export default {
   data: () => ({
-    isOpen: true
+    isOpen: null
   }),
   mounted() {
   },
@@ -55,10 +55,11 @@ export default {
 <style scoped>
 .nav {
   background: #1a1a1a;
-  position: absolute;
+  position: relative;
   width: 12%;
   text-align: center;
   height: 100vh;
+  overflow: hidden;
 }
 
 .i {
@@ -67,8 +68,14 @@ export default {
   padding-right: 1.5rem;
 }
 
-.i a:hover{
+
+.icons li a:hover{
   color: white;
+}
+
+.icons li{
+  margin-top: 60%;
+  list-style: none;
 }
 .close{
   width: 80px
@@ -78,22 +85,24 @@ export default {
   float: left;
   height: 4vh;
   width: 3vw;
+  cursor: pointer;
   margin-top: 40px;
-  margin-bottom: 45px;
+  margin-bottom: 55px;
   margin-left: 15%;
 }
 #logo {
   display: flex;
   float: left;
   height: 4vh;
+  cursor: pointer;
   width: 6vw;
   margin-top: 40px;
   margin-bottom: 50px;
   margin-left: 28%;
 }
-.nav ul li{
+.nav .full li{
+  margin-top: 20%;
   list-style: none;
-  margin-top: 40%;
 }
 .nav a {
   cursor: pointer;
@@ -138,6 +147,19 @@ export default {
   border-bottom: 2px solid #3475d1;
 }
 @media(max-width: 768px){
+  .nav{
+    width: 30%;
+  }
+  .close{
+    width: 70px
+  }
+  #logo {
+    height: 3.5vh;
+    width: 9vw;
+    margin-top: 40px;
+    margin-bottom: 45px;
+    margin-left: 35%;
+  }
   #ilogo {
     height: 4vh;
     width: 7vw;
@@ -147,5 +169,59 @@ export default {
   }
 }
 @media(max-width: 414px){
+  .close{
+    width: 45px
+  }
+  .nav a {
+    font-size: 1rem;
+    padding-bottom: 5px;
+    padding-top: 0rem ;
+  }
+  .nav .full li {
+    margin-top: 4rem;
+  }
+  #ilogo {
+    height: 4vh;
+    width: 9vw;
+    margin-top: 40px;
+    margin-left: 8%;
+  }
+  #logo{
+    height: 4vh;
+    margin-left: 20%;
+    width: 20vw;
+    margin-top: 40px;
+  }
+  .i {
+    font-size: 1rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .icons li{
+    margin-top: 2rem;
+  }
+
+  .nav .home{
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+  .nav .analytics{
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .nav .customers{
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .nav .blog{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .nav .logout{
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 </style>
