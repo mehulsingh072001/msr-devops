@@ -3,9 +3,8 @@
     <label  class="select" for="category"> I want to learn about
       <select  name="category" id="category">
         <option value="everything">everything</option>
-        <option value="linux">Linux</option>
-        <option value="web-dev">web-dev</option>
-        <option value="pc">PC</option>
+        <option value="linux">linux</option>
+        <option value="web-dev">web development</option>
       </select>
     </label>
   </div>

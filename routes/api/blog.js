@@ -26,6 +26,13 @@ router.get('/', (req, res) => {
         .sort({ date: -1})
         .then(posts => res.json(posts));
 });
+
+router.get('/post/:id', (req, res, id) => {
+    Post.findById(id)
+        .then(posts => res.json(posts));
+        .catch(console.log('Error'))
+}) 
+
 router.get('/everything', (req, res) => {
     Post.find()
         .sort({ date: -1})

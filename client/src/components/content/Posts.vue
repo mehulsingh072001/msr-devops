@@ -8,6 +8,7 @@
             <div class="content">
               <h2>{{post.title}}</h2>
               <p>{{post.description}}</p>
+              <router-link :to="{name: 'post_detail' , params:{ title: post.title}}" class="more">Read More</router-link>
             </div>
       </section>
     </main>
@@ -46,10 +47,28 @@ export default {
   max-width: 1000px;
   overflow: hidden;
   position: relative;
-  margin-left: 25%; 
-  padding: 1rem;
+  box-shadow: 1px 1px 5px 6px #ccc;
+  margin-left: 23%; 
   margin-top: 2%;
   }
+
+  .more{
+    margin-top: 20%;
+    cursor: pointer;
+    color: white;
+    background: #3475d1;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    transition: all 0.3s;
+  }
+  
+  .more:hover{
+    background: #dddddd;
+    color: #3475d1;
+    border: 3px solid #3475d1;
+  }
+
   .card h2 {
     padding-top: 10%;
     font-size: 40px;
@@ -64,6 +83,7 @@ export default {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
     background: #dddddd;
+
     z-index: 4;
     height: 38vh;
     color: black;

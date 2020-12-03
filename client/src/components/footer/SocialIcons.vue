@@ -1,6 +1,6 @@
 <template>
   <div class=".container grid-2">
-  <h3 class="message">Connect with us.</h3>
+  <h3 class="message">Connect with me.</h3>
   <ul>
     <li><a href="https://www.facebook.com/mehulsingh.rathore.355" target="_blank">
         <i class="fab fa-facebook" tabindex="0"></i>
