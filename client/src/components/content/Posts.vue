@@ -8,7 +8,7 @@
             <div class="content">
               <h2>{{post.title}}</h2>
               <p>{{post.description}}</p>
-              <router-link :to="{name: 'post_detail' , params:{ id: post._id}}" class="more">Read More</router-link>
+              <router-link :to="{name: 'post_detail' , params:{ id: post._id}}"><button class="more">Read More</button></router-link>
             </div>
       </section>
     </main>
@@ -52,6 +52,10 @@ export default {
   margin-top: 2%;
   }
 
+  .container:hover{
+    box-shadow: 8px 8px 14px 18px #ccc;
+    transition: 1s;
+  }
   .more{
     margin-top: 20%;
     cursor: pointer;
@@ -83,7 +87,6 @@ export default {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
     background: #dddddd;
-
     z-index: 4;
     height: 38vh;
     color: black;
