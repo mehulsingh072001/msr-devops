@@ -28,8 +28,9 @@ router.get('/', (req, res) => {
 });
 
 router.get('/post/:id', (req, res, id) => {
+    var id = req.params.id
     Post.findById(id)
-        .then(posts => res.json(posts));
+        .then(posts => res.json(posts))
         .catch(console.log('Error'))
 }) 
 
