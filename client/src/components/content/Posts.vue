@@ -2,13 +2,13 @@
   <div>
     <Preloader v-if="isLoading"/>
     <h1 v-if="error">There is an error</h1>
-    <main v-for="post in allPosts" :key="post.id" class="container">
+    <main v-for="post in allPosts" :key="post._id" class="container">
       <section class="card">
           <img class="thumb" v-bind:src="'http://192.168.43.161/'+post.image"  alt="thumbnail">
             <div class="content">
               <h2>{{post.title}}</h2>
               <p>{{post.description}}</p>
-              <router-link :to="{name: 'post_detail' , params:{ title: post.title}}" class="more">Read More</router-link>
+              <router-link :to="{name: 'post_detail' , params:{ id: post._id}}" class="more">Read More</router-link>
             </div>
       </section>
     </main>
